@@ -54,6 +54,8 @@ tokens
   RHS;
   ASSERT;
   ASSUME;
+  ASSERTM;
+  ASSUMEM;
   THROW;
   START;
   ACTION_EXT_CALL;
@@ -445,7 +447,7 @@ body
 	;
 
 localVarsDeclaration
-	: t='local' localVarDeclaration+       -> ^(LIST[$t] localVarDeclaration+)
+	: t='local'? localVarDeclaration+      -> ^(LIST localVarDeclaration+)
 	;
 
 localVarDeclaration
@@ -487,7 +489,11 @@ seqTransformation
 	;
 
 action
-	: t='assert' exp annotationList ';'    -> ^(ASSERT[$t] exp annotationList)
+	: t='assert' '(' e1=exp ',' e2=exp ')'
+	  annotationList ';'                   -> ^(ASSERTM[$t] $e1 $e2 annotationList)
+	| t='assert' exp annotationList ';'    -> ^(ASSERT[$t] exp annotationList)
+	| t='assume' '(' e1=exp ',' e2=exp ')'
+	  annotationList ';'                   -> ^(ASSUMEM[$t] $e1 $e2 annotationList)
 	| t='assume' exp annotationList ';'    -> ^(ASSUME[$t] exp annotationList)
 	| t='throw' exp annotationList ';'     -> ^(THROW[$t] exp annotationList)
 	| assignment 

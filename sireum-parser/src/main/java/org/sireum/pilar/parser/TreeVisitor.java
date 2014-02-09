@@ -24,7 +24,7 @@ public class TreeVisitor<G> {
 
   public void visit(final Tree t) {
     switch (t.getType()) {
-      case 108:
+      case 110:
         if (visitANNOTATED_TYPE(t)) {
           visitChildren(t);
         }
@@ -34,12 +34,12 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 151:
+      case 153:
         if (visitTX_Exponent(t)) {
           visitChildren(t);
         }
         return;
-      case 83:
+      case 85:
         if (visitFLOAT(t)) {
           visitChildren(t);
         }
@@ -54,7 +54,7 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 59:
+      case 61:
         if (visitCATCH_CLAUSE(t)) {
           visitChildren(t);
         }
@@ -64,32 +64,32 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 71:
+      case 73:
         if (visitCALL(t)) {
           visitChildren(t);
         }
         return;
-      case 148:
+      case 150:
         if (visitTX_BASICID(t)) {
           visitChildren(t);
         }
         return;
-      case 145:
+      case 147:
         if (visitBIN_LIT(t)) {
           visitChildren(t);
         }
         return;
-      case 76:
+      case 78:
         if (visitDEC_LIT(t)) {
           visitChildren(t);
         }
         return;
-      case 113:
+      case 115:
         if (visitLET_BINDING(t)) {
           visitChildren(t);
         }
         return;
-      case 61:
+      case 63:
         if (visitIF_THEN_EXP(t)) {
           visitChildren(t);
         }
@@ -99,17 +99,17 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 152:
+      case 154:
         if (visitTX_FloatTypeSuffix(t)) {
           visitChildren(t);
         }
         return;
-      case 134:
+      case 136:
         if (visitEQ_OP(t)) {
           visitChildren(t);
         }
         return;
-      case 125:
+      case 127:
         if (visitTYPEVARID(t)) {
           visitChildren(t);
         }
@@ -124,7 +124,7 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 75:
+      case 77:
         if (visitHEX_LIT(t)) {
           visitChildren(t);
         }
@@ -134,12 +134,12 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 56:
+      case 58:
         if (visitSWITCH_CASE_JUMP(t)) {
           visitChildren(t);
         }
         return;
-      case 136:
+      case 138:
         if (visitREL_OP(t)) {
           visitChildren(t);
         }
@@ -149,7 +149,7 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 50:
+      case 52:
         if (visitGOTO(t)) {
           visitChildren(t);
         }
@@ -159,12 +159,12 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 150:
+      case 152:
         if (visitTX_IntTypeSuffix(t)) {
           visitChildren(t);
         }
         return;
-      case 98:
+      case 100:
         if (visitMAPPING(t)) {
           visitChildren(t);
         }
@@ -174,37 +174,37 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 60:
+      case 62:
         if (visitIF_EXP(t)) {
           visitChildren(t);
         }
         return;
-      case 144:
+      case 146:
         if (visitRAW_LIT(t)) {
           visitChildren(t);
         }
         return;
-      case 132:
+      case 134:
         if (visitXOR_OP(t)) {
           visitChildren(t);
         }
         return;
-      case 161:
+      case 163:
         if (visitTX_OctalEscape(t)) {
           visitChildren(t);
         }
         return;
-      case 163:
+      case 165:
         if (visitCOMMENT(t)) {
           visitChildren(t);
         }
         return;
-      case 95:
+      case 97:
         if (visitNFUNCTION(t)) {
           visitChildren(t);
         }
         return;
-      case 115:
+      case 117:
         if (visitNEW_MULTI_ARRAY_FRAGMENT(t)) {
           visitChildren(t);
         }
@@ -224,22 +224,22 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 84:
+      case 86:
         if (visitRATIONAL(t)) {
           visitChildren(t);
         }
         return;
-      case 116:
+      case 118:
         if (visitTYPE(t)) {
           visitChildren(t);
         }
         return;
-      case 117:
+      case 119:
         if (visitARRAY_FRAGMENT(t)) {
           visitChildren(t);
         }
         return;
-      case 88:
+      case 90:
         if (visitNLIST_RANGE(t)) {
           visitChildren(t);
         }
@@ -254,27 +254,27 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 130:
+      case 132:
         if (visitCOND_AND_OP(t)) {
           visitChildren(t);
         }
         return;
-      case 97:
+      case 99:
         if (visitFUN(t)) {
           visitChildren(t);
         }
         return;
-      case 74:
+      case 76:
         if (visitNULL(t)) {
           visitChildren(t);
         }
         return;
-      case 109:
+      case 111:
         if (visitPROCEDURE_TYPE_PARAM_VARIABLE(t)) {
           visitChildren(t);
         }
         return;
-      case 129:
+      case 131:
         if (visitCOND_OR_OP(t)) {
           visitChildren(t);
         }
@@ -284,7 +284,7 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 101:
+      case 103:
         if (visitINT(t)) {
           visitChildren(t);
         }
@@ -294,7 +294,7 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 123:
+      case 125:
         if (visitANN_TYPE(t)) {
           visitChildren(t);
         }
@@ -304,7 +304,7 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 91:
+      case 93:
         if (visitNMULTI_ARRAY_FRAGMENT(t)) {
           visitChildren(t);
         }
@@ -319,12 +319,12 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 139:
+      case 141:
         if (visitMUL_OP(t)) {
           visitChildren(t);
         }
         return;
-      case 128:
+      case 130:
         if (visitACTION_EXT_OP(t)) {
           visitChildren(t);
         }
@@ -334,7 +334,7 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 70:
+      case 72:
         if (visitACCESS(t)) {
           visitChildren(t);
         }
@@ -344,37 +344,37 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 89:
+      case 91:
         if (visitNLIST(t)) {
           visitChildren(t);
         }
         return;
-      case 158:
+      case 160:
         if (visitTX_Letter(t)) {
           visitChildren(t);
         }
         return;
-      case 85:
+      case 87:
         if (visitCHAR(t)) {
           visitChildren(t);
         }
         return;
-      case 90:
+      case 92:
         if (visitNMULTI_ARRAY(t)) {
           visitChildren(t);
         }
         return;
-      case 138:
+      case 140:
         if (visitADD_OP(t)) {
           visitChildren(t);
         }
         return;
-      case 72:
+      case 74:
         if (visitTRUE(t)) {
           visitChildren(t);
         }
         return;
-      case 92:
+      case 94:
         if (visitNRECORD(t)) {
           visitChildren(t);
         }
@@ -384,22 +384,22 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 81:
+      case 83:
         if (visitNAME(t)) {
           visitChildren(t);
         }
         return;
-      case 99:
+      case 101:
         if (visitMATCHING(t)) {
           visitChildren(t);
         }
         return;
-      case 66:
+      case 68:
         if (visitBINARY(t)) {
           visitChildren(t);
         }
         return;
-      case 96:
+      case 98:
         if (visitFUN_EXP(t)) {
           visitChildren(t);
         }
@@ -419,7 +419,7 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 65:
+      case 67:
         if (visitSWITCH_DEFAULT_EXP(t)) {
           visitChildren(t);
         }
@@ -429,37 +429,37 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 142:
+      case 144:
         if (visitSTRING_LIT(t)) {
           visitChildren(t);
         }
         return;
-      case 68:
+      case 70:
         if (visitCAST(t)) {
           visitChildren(t);
         }
         return;
-      case 127:
+      case 129:
         if (visitLOCID(t)) {
           visitChildren(t);
         }
         return;
-      case 156:
+      case 158:
         if (visitTX_OPID_CHARMLT(t)) {
           visitChildren(t);
         }
         return;
-      case 80:
+      case 82:
         if (visitNAME_EXP(t)) {
           visitChildren(t);
         }
         return;
-      case 102:
+      case 104:
         if (visitNAME_TYPE(t)) {
           visitChildren(t);
         }
         return;
-      case 112:
+      case 114:
         if (visitLET_EXP(t)) {
           visitChildren(t);
         }
@@ -469,32 +469,32 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 120:
+      case 122:
         if (visitSET_FRAGMENT(t)) {
           visitChildren(t);
         }
         return;
-      case 87:
+      case 89:
         if (visitTYPE_EXP(t)) {
           visitChildren(t);
         }
         return;
-      case 153:
+      case 155:
         if (visitTX_EscapeSequence(t)) {
           visitChildren(t);
         }
         return;
-      case 131:
+      case 133:
         if (visitOR_OP(t)) {
           visitChildren(t);
         }
         return;
-      case 47:
+      case 49:
         if (visitTHROW(t)) {
           visitChildren(t);
         }
         return;
-      case 133:
+      case 135:
         if (visitAND_OP(t)) {
           visitChildren(t);
         }
@@ -514,47 +514,47 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 77:
+      case 79:
         if (visitOCT_LIT(t)) {
           visitChildren(t);
         }
         return;
-      case 104:
+      case 106:
         if (visitTUPLE_TYPE(t)) {
           visitChildren(t);
         }
         return;
-      case 135:
+      case 137:
         if (visitCOLON_OP(t)) {
           visitChildren(t);
         }
         return;
-      case 154:
+      case 156:
         if (visitTX_OPID_SUFFIX(t)) {
           visitChildren(t);
         }
         return;
-      case 143:
+      case 145:
         if (visitSYMBOL_LIT(t)) {
           visitChildren(t);
         }
         return;
-      case 114:
+      case 116:
         if (visitNEW_EXP(t)) {
           visitChildren(t);
         }
         return;
-      case 107:
+      case 109:
         if (visitTYPE_PARAM(t)) {
           visitChildren(t);
         }
         return;
-      case 62:
+      case 64:
         if (visitIF_ELSE_EXP(t)) {
           visitChildren(t);
         }
         return;
-      case 137:
+      case 139:
         if (visitSHIFT_OP(t)) {
           visitChildren(t);
         }
@@ -564,33 +564,38 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 55:
+      case 57:
         if (visitSWITCH_JUMP(t)) {
           visitChildren(t);
         }
         return;
-      case 54:
+      case 56:
         if (visitIF_ELSE_JUMP(t)) {
           visitChildren(t);
         }
         return;
-      case 105:
+      case 107:
         if (visitFUN_TYPE(t)) {
           visitChildren(t);
         }
         return;
-      case 79:
+      case 81:
         if (visitTUPLE(t)) {
           visitChildren(t);
         }
         return;
-      case 126:
+      case 128:
         if (visitGLOBALID(t)) {
           visitChildren(t);
         }
         return;
-      case 69:
+      case 71:
         if (visitINDEXING(t)) {
+          visitChildren(t);
+        }
+        return;
+      case 47:
+        if (visitASSERTM(t)) {
           visitChildren(t);
         }
         return;
@@ -599,7 +604,7 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 49:
+      case 51:
         if (visitACTION_EXT_CALL(t)) {
           visitChildren(t);
         }
@@ -609,7 +614,7 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 146:
+      case 148:
         if (visitFLOAT_LIT(t)) {
           visitChildren(t);
         }
@@ -619,7 +624,7 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 63:
+      case 65:
         if (visitSWITCH_EXP(t)) {
           visitChildren(t);
         }
@@ -669,52 +674,62 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 51:
+      case 53:
         if (visitRETURN(t)) {
           visitChildren(t);
         }
         return;
-      case 162:
+      case 164:
         if (visitWS(t)) {
           visitChildren(t);
         }
         return;
-      case 164:
+      case 166:
         if (visitLINE_COMMENT(t)) {
           visitChildren(t);
         }
         return;
-      case 73:
+      case 75:
         if (visitFALSE(t)) {
           visitChildren(t);
         }
         return;
-      case 122:
+      case 124:
         if (visitRAW(t)) {
           visitChildren(t);
         }
         return;
-      case 86:
+      case 88:
         if (visitSYMBOL(t)) {
           visitChildren(t);
         }
         return;
-      case 121:
+      case 123:
         if (visitTYPEVAR_TUPLE(t)) {
           visitChildren(t);
         }
         return;
-      case 118:
+      case 120:
         if (visitLIST_FRAGMENT(t)) {
           visitChildren(t);
         }
         return;
-      case 111:
+      case 113:
         if (visitRELATION_TYPE(t)) {
           visitChildren(t);
         }
         return;
-      case 78:
+      case 226:
+        if (visitT__226(t)) {
+          visitChildren(t);
+        }
+        return;
+      case 225:
+        if (visitT__225(t)) {
+          visitChildren(t);
+        }
+        return;
+      case 80:
         if (visitSTRING(t)) {
           visitChildren(t);
         }
@@ -769,7 +784,7 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 110:
+      case 112:
         if (visitFUNCTION_TYPE(t)) {
           visitChildren(t);
         }
@@ -789,17 +804,17 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 147:
+      case 149:
         if (visitRATIONAL_LIT(t)) {
           visitChildren(t);
         }
         return;
-      case 119:
+      case 121:
         if (visitMULTIARRAY_FRAGMENT(t)) {
           visitChildren(t);
         }
         return;
-      case 100:
+      case 102:
         if (visitANN_EXP(t)) {
           visitChildren(t);
         }
@@ -814,7 +829,7 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 149:
+      case 151:
         if (visitTX_HexDigit(t)) {
           visitChildren(t);
         }
@@ -824,7 +839,7 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 58:
+      case 60:
         if (visitCALL_JUMP(t)) {
           visitChildren(t);
         }
@@ -834,7 +849,7 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 159:
+      case 161:
         if (visitTX_JavaIDDigit(t)) {
           visitChildren(t);
         }
@@ -844,7 +859,7 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 94:
+      case 96:
         if (visitNSET(t)) {
           visitChildren(t);
         }
@@ -854,12 +869,12 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 155:
+      case 157:
         if (visitTX_OPID_CHAR(t)) {
           visitChildren(t);
         }
         return;
-      case 48:
+      case 50:
         if (visitSTART(t)) {
           visitChildren(t);
         }
@@ -894,7 +909,7 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 93:
+      case 95:
         if (visitATTR_INIT(t)) {
           visitChildren(t);
         }
@@ -969,17 +984,17 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 157:
+      case 159:
         if (visitTX_OPID_CHARMGT(t)) {
           visitChildren(t);
         }
         return;
-      case 141:
+      case 143:
         if (visitCHAR_LIT(t)) {
           visitChildren(t);
         }
         return;
-      case 106:
+      case 108:
         if (visitPROCEDURE_TYPE(t)) {
           visitChildren(t);
         }
@@ -989,22 +1004,27 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 57:
+      case 59:
         if (visitSWITCH_DEFAULT_JUMP(t)) {
           visitChildren(t);
         }
         return;
-      case 52:
+      case 54:
         if (visitIF_JUMP(t)) {
           visitChildren(t);
         }
         return;
-      case 124:
+      case 126:
         if (visitID(t)) {
           visitChildren(t);
         }
         return;
-      case 53:
+      case 48:
+        if (visitASSUMEM(t)) {
+          visitChildren(t);
+        }
+        return;
+      case 55:
         if (visitIF_THEN_JUMP(t)) {
           visitChildren(t);
         }
@@ -1019,7 +1039,7 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 64:
+      case 66:
         if (visitSWITCH_CASE_EXP(t)) {
           visitChildren(t);
         }
@@ -1079,7 +1099,7 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 140:
+      case 142:
         if (visitUN_OP(t)) {
           visitChildren(t);
         }
@@ -1089,22 +1109,12 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 166:
-        if (visitT__166(t)) {
-          visitChildren(t);
-        }
-        return;
-      case 165:
-        if (visitT__165(t)) {
-          visitChildren(t);
-        }
-        return;
-      case 103:
+      case 105:
         if (visitTYPE_TUPLE(t)) {
           visitChildren(t);
         }
         return;
-      case 67:
+      case 69:
         if (visitUNARY(t)) {
           visitChildren(t);
         }
@@ -1119,12 +1129,12 @@ public class TreeVisitor<G> {
           visitChildren(t);
         }
         return;
-      case 160:
+      case 162:
         if (visitTX_UnicodeEscape(t)) {
           visitChildren(t);
         }
         return;
-      case 82:
+      case 84:
         if (visitTYPEVARID_TYPE(t)) {
           visitChildren(t);
         }
@@ -1186,11 +1196,19 @@ public class TreeVisitor<G> {
     return defaultCase(t);
   }
 
+  protected boolean visitASSERTM(final Tree t) {
+    return defaultCase(t);
+  }
+
   protected boolean visitASSIGN(final Tree t) {
     return defaultCase(t);
   }
 
   protected boolean visitASSUME(final Tree t) {
+    return defaultCase(t);
+  }
+
+  protected boolean visitASSUMEM(final Tree t) {
     return defaultCase(t);
   }
 
@@ -1641,14 +1659,6 @@ public class TreeVisitor<G> {
     return defaultCase(t);
   }
 
-  protected boolean visitT__165(final Tree t) {
-    return defaultCase(t);
-  }
-
-  protected boolean visitT__166(final Tree t) {
-    return defaultCase(t);
-  }
-
   protected boolean visitT__167(final Tree t) {
     return defaultCase(t);
   }
@@ -1878,6 +1888,14 @@ public class TreeVisitor<G> {
   }
 
   protected boolean visitT__224(final Tree t) {
+    return defaultCase(t);
+  }
+
+  protected boolean visitT__225(final Tree t) {
+    return defaultCase(t);
+  }
+
+  protected boolean visitT__226(final Tree t) {
     return defaultCase(t);
   }
 
