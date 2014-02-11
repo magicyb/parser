@@ -545,7 +545,8 @@ gotoJump
 	;
 
 returnJump
-	: t='return' exp? annotationList ';'   -> ^(RETURN[$t] ^(OPTION exp?) annotationList)
+	: t='return' (exp ( ',' exp)* )? 
+	  annotationList ';'                   -> ^(RETURN[$t] ^(LIST exp*) annotationList)
 	;
 
 ifThenJump

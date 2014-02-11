@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:45:30 /sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g 2014-02-09 10:11:25
+// $ANTLR 3.3 Nov 30, 2010 12:45:30 /sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g 2014-02-10 22:56:44
 
 /*
 Copyright (c) 2011 Robby, Kansas State University.        
@@ -38,7 +38,7 @@ public class AntlrPilarLexer extends Lexer {
 
     @Override
     public String getDescription() {
-      return "978:1: FLOAT_LIT : ( ( '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( TX_Exponent )? ( TX_FloatTypeSuffix )? | ( '-' )? '.' ( '0' .. '9' )+ ( TX_Exponent )? ( TX_FloatTypeSuffix )? | ( '-' )? ( '0' .. '9' )+ TX_Exponent ( TX_FloatTypeSuffix )? | ( '-' )? ( '0' .. '9' )+ TX_FloatTypeSuffix );";
+      return "979:1: FLOAT_LIT : ( ( '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( TX_Exponent )? ( TX_FloatTypeSuffix )? | ( '-' )? '.' ( '0' .. '9' )+ ( TX_Exponent )? ( TX_FloatTypeSuffix )? | ( '-' )? ( '0' .. '9' )+ TX_Exponent ( TX_FloatTypeSuffix )? | ( '-' )? ( '0' .. '9' )+ TX_FloatTypeSuffix );";
     }
   }
 
@@ -4229,11 +4229,11 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.ACTION_EXT_OP;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1045:3: ( ':' ( TX_OPID_CHAR )+ '=' )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1045:5: ':' ( TX_OPID_CHAR )+ '='
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1046:3: ( ':' ( TX_OPID_CHAR )+ '=' )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1046:5: ':' ( TX_OPID_CHAR )+ '='
       {
         match(':');
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1045:9: ( TX_OPID_CHAR )+
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1046:9: ( TX_OPID_CHAR )+
         int cnt50 = 0;
         loop50: do {
           int alt50 = 2;
@@ -4259,7 +4259,7 @@ public class AntlrPilarLexer extends Lexer {
 
           switch (alt50) {
             case 1:
-            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1045:9: TX_OPID_CHAR
+            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1046:9: TX_OPID_CHAR
             {
               mTX_OPID_CHAR();
 
@@ -4294,8 +4294,8 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.ADD_OP;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1032:2: ( ( '+' | '-' ) TX_OPID_SUFFIX )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1032:4: ( '+' | '-' ) TX_OPID_SUFFIX
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1033:2: ( ( '+' | '-' ) TX_OPID_SUFFIX )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1033:4: ( '+' | '-' ) TX_OPID_SUFFIX
       {
         if ((this.input.LA(1) == '+') || (this.input.LA(1) == '-')) {
           this.input.consume();
@@ -4324,8 +4324,8 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.AND_OP;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1005:8: ( '^&' TX_OPID_SUFFIX )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1005:10: '^&' TX_OPID_SUFFIX
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1006:8: ( '^&' TX_OPID_SUFFIX )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1006:10: '^&' TX_OPID_SUFFIX
       {
         match("^&");
 
@@ -4346,8 +4346,8 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.BIN_LIT;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:975:2: ( '0' ( 'b' | 'B' ) ( '0' | '1' )+ ( TX_IntTypeSuffix )? )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:975:4: '0' ( 'b' | 'B' ) ( '0' | '1' )+ ( TX_IntTypeSuffix )?
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:976:2: ( '0' ( 'b' | 'B' ) ( '0' | '1' )+ ( TX_IntTypeSuffix )? )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:976:4: '0' ( 'b' | 'B' ) ( '0' | '1' )+ ( TX_IntTypeSuffix )?
       {
         match('0');
         if ((this.input.LA(1) == 'B') || (this.input.LA(1) == 'b')) {
@@ -4360,7 +4360,7 @@ public class AntlrPilarLexer extends Lexer {
           throw mse;
         }
 
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:975:20: ( '0' | '1' )+
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:976:20: ( '0' | '1' )+
         int cnt22 = 0;
         loop22: do {
           int alt22 = 2;
@@ -4398,7 +4398,7 @@ public class AntlrPilarLexer extends Lexer {
           cnt22++;
         } while (true);
 
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:975:33: ( TX_IntTypeSuffix )?
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:976:33: ( TX_IntTypeSuffix )?
         int alt23 = 2;
         final int LA23_0 = this.input.LA(1);
 
@@ -4407,7 +4407,7 @@ public class AntlrPilarLexer extends Lexer {
         }
         switch (alt23) {
           case 1:
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:975:33: TX_IntTypeSuffix
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:976:33: TX_IntTypeSuffix
           {
             mTX_IntTypeSuffix();
 
@@ -4431,11 +4431,11 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.CHAR_LIT;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:990:2: ( '\\'' ( TX_EscapeSequence | ~ ( '\\'' | '\\\\' ) ) '\\'' )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:990:4: '\\'' ( TX_EscapeSequence | ~ ( '\\'' | '\\\\' ) ) '\\''
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:991:2: ( '\\'' ( TX_EscapeSequence | ~ ( '\\'' | '\\\\' ) ) '\\'' )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:991:4: '\\'' ( TX_EscapeSequence | ~ ( '\\'' | '\\\\' ) ) '\\''
       {
         match('\'');
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:990:9: ( TX_EscapeSequence | ~ ( '\\'' | '\\\\' ) )
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:991:9: ( TX_EscapeSequence | ~ ( '\\'' | '\\\\' ) )
         int alt43 = 2;
         final int LA43_0 = this.input.LA(1);
 
@@ -4452,14 +4452,14 @@ public class AntlrPilarLexer extends Lexer {
         }
         switch (alt43) {
           case 1:
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:990:11: TX_EscapeSequence
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:991:11: TX_EscapeSequence
           {
             mTX_EscapeSequence();
 
           }
             break;
           case 2:
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:990:31: ~ ( '\\'' | '\\\\' )
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:991:31: ~ ( '\\'' | '\\\\' )
           {
             if (((this.input.LA(1) >= '\u0000') && (this.input.LA(1) <= '&'))
                 || ((this.input.LA(1) >= '(') && (this.input.LA(1) <= '['))
@@ -4495,8 +4495,8 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.COLON_OP;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1018:2: ( TX_OPID_CHAR TX_OPID_SUFFIX ':' )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1018:4: TX_OPID_CHAR TX_OPID_SUFFIX ':'
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1019:2: ( TX_OPID_CHAR TX_OPID_SUFFIX ':' )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1019:4: TX_OPID_CHAR TX_OPID_SUFFIX ':'
       {
         mTX_OPID_CHAR();
         mTX_OPID_SUFFIX();
@@ -4517,12 +4517,12 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.COMMENT;
       int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1156:9: ( '/*' ( options {greedy=false; } : . )* '*/' )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1156:11: '/*' ( options {greedy=false; } : . )* '*/'
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1157:9: ( '/*' ( options {greedy=false; } : . )* '*/' )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1157:11: '/*' ( options {greedy=false; } : . )* '*/'
       {
         match("/*");
 
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1156:16: ( options {greedy=false; } : . )*
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1157:16: ( options {greedy=false; } : . )*
         loop60: do {
           int alt60 = 2;
           final int LA60_0 = this.input.LA(1);
@@ -4542,7 +4542,7 @@ public class AntlrPilarLexer extends Lexer {
 
           switch (alt60) {
             case 1:
-            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1156:44: .
+            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1157:44: .
             {
               matchAny();
 
@@ -4573,8 +4573,8 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.COND_AND_OP;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:998:2: ( '&' TX_OPID_SUFFIX )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:998:4: '&' TX_OPID_SUFFIX
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:999:2: ( '&' TX_OPID_SUFFIX )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:999:4: '&' TX_OPID_SUFFIX
       {
         match('&');
         mTX_OPID_SUFFIX();
@@ -4594,8 +4594,8 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.COND_OR_OP;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1002:2: ( '||' TX_OPID_SUFFIX )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1002:4: '||' TX_OPID_SUFFIX
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1003:2: ( '||' TX_OPID_SUFFIX )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1003:4: '||' TX_OPID_SUFFIX
       {
         match("||");
 
@@ -4616,10 +4616,10 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.DEC_LIT;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:967:2: ( ( '0' | ( '-' )? '1' .. '9' ( '0' .. '9' )* ) ( TX_IntTypeSuffix )? )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:967:4: ( '0' | ( '-' )? '1' .. '9' ( '0' .. '9' )* ) ( TX_IntTypeSuffix )?
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:968:2: ( ( '0' | ( '-' )? '1' .. '9' ( '0' .. '9' )* ) ( TX_IntTypeSuffix )? )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:968:4: ( '0' | ( '-' )? '1' .. '9' ( '0' .. '9' )* ) ( TX_IntTypeSuffix )?
       {
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:967:4: ( '0' | ( '-' )? '1' .. '9' ( '0' .. '9' )* )
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:968:4: ( '0' | ( '-' )? '1' .. '9' ( '0' .. '9' )* )
         int alt18 = 2;
         final int LA18_0 = this.input.LA(1);
 
@@ -4635,16 +4635,16 @@ public class AntlrPilarLexer extends Lexer {
         }
         switch (alt18) {
           case 1:
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:967:5: '0'
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:968:5: '0'
           {
             match('0');
 
           }
             break;
           case 2:
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:967:11: ( '-' )? '1' .. '9' ( '0' .. '9' )*
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:968:11: ( '-' )? '1' .. '9' ( '0' .. '9' )*
           {
-            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:967:11: ( '-' )?
+            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:968:11: ( '-' )?
             int alt16 = 2;
             final int LA16_0 = this.input.LA(1);
 
@@ -4653,7 +4653,7 @@ public class AntlrPilarLexer extends Lexer {
             }
             switch (alt16) {
               case 1:
-              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:967:11: '-'
+              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:968:11: '-'
               {
                 match('-');
 
@@ -4663,7 +4663,7 @@ public class AntlrPilarLexer extends Lexer {
             }
 
             matchRange('1', '9');
-            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:967:25: ( '0' .. '9' )*
+            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:968:25: ( '0' .. '9' )*
             loop17: do {
               int alt17 = 2;
               final int LA17_0 = this.input.LA(1);
@@ -4674,7 +4674,7 @@ public class AntlrPilarLexer extends Lexer {
 
               switch (alt17) {
                 case 1:
-                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:967:25: '0' .. '9'
+                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:968:25: '0' .. '9'
                 {
                   matchRange('0', '9');
 
@@ -4691,7 +4691,7 @@ public class AntlrPilarLexer extends Lexer {
 
         }
 
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:967:36: ( TX_IntTypeSuffix )?
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:968:36: ( TX_IntTypeSuffix )?
         int alt19 = 2;
         final int LA19_0 = this.input.LA(1);
 
@@ -4700,7 +4700,7 @@ public class AntlrPilarLexer extends Lexer {
         }
         switch (alt19) {
           case 1:
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:967:36: TX_IntTypeSuffix
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:968:36: TX_IntTypeSuffix
           {
             mTX_IntTypeSuffix();
 
@@ -4724,10 +4724,10 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.EQ_OP;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1014:7: ( ( '==' | '!=' ) TX_OPID_SUFFIX )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1014:9: ( '==' | '!=' ) TX_OPID_SUFFIX
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1015:7: ( ( '==' | '!=' ) TX_OPID_SUFFIX )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1015:9: ( '==' | '!=' ) TX_OPID_SUFFIX
       {
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1014:9: ( '==' | '!=' )
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1015:9: ( '==' | '!=' )
         int alt45 = 2;
         final int LA45_0 = this.input.LA(1);
 
@@ -4743,14 +4743,14 @@ public class AntlrPilarLexer extends Lexer {
         }
         switch (alt45) {
           case 1:
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1014:11: '=='
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1015:11: '=='
           {
             match("==");
 
           }
             break;
           case 2:
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1014:18: '!='
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1015:18: '!='
           {
             match("!=");
 
@@ -4776,14 +4776,14 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.FLOAT_LIT;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:979:2: ( ( '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( TX_Exponent )? ( TX_FloatTypeSuffix )? | ( '-' )? '.' ( '0' .. '9' )+ ( TX_Exponent )? ( TX_FloatTypeSuffix )? | ( '-' )? ( '0' .. '9' )+ TX_Exponent ( TX_FloatTypeSuffix )? | ( '-' )? ( '0' .. '9' )+ TX_FloatTypeSuffix )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:980:2: ( ( '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( TX_Exponent )? ( TX_FloatTypeSuffix )? | ( '-' )? '.' ( '0' .. '9' )+ ( TX_Exponent )? ( TX_FloatTypeSuffix )? | ( '-' )? ( '0' .. '9' )+ TX_Exponent ( TX_FloatTypeSuffix )? | ( '-' )? ( '0' .. '9' )+ TX_FloatTypeSuffix )
       int alt38 = 4;
       alt38 = this.dfa38.predict(this.input);
       switch (alt38) {
         case 1:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:979:4: ( '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( TX_Exponent )? ( TX_FloatTypeSuffix )?
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:980:4: ( '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( TX_Exponent )? ( TX_FloatTypeSuffix )?
         {
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:979:4: ( '-' )?
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:980:4: ( '-' )?
           int alt24 = 2;
           final int LA24_0 = this.input.LA(1);
 
@@ -4792,7 +4792,7 @@ public class AntlrPilarLexer extends Lexer {
           }
           switch (alt24) {
             case 1:
-            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:979:4: '-'
+            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:980:4: '-'
             {
               match('-');
 
@@ -4801,7 +4801,7 @@ public class AntlrPilarLexer extends Lexer {
 
           }
 
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:979:9: ( '0' .. '9' )+
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:980:9: ( '0' .. '9' )+
           int cnt25 = 0;
           loop25: do {
             int alt25 = 2;
@@ -4813,7 +4813,7 @@ public class AntlrPilarLexer extends Lexer {
 
             switch (alt25) {
               case 1:
-              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:979:10: '0' .. '9'
+              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:980:10: '0' .. '9'
               {
                 matchRange('0', '9');
 
@@ -4832,7 +4832,7 @@ public class AntlrPilarLexer extends Lexer {
           } while (true);
 
           match('.');
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:979:25: ( '0' .. '9' )*
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:980:25: ( '0' .. '9' )*
           loop26: do {
             int alt26 = 2;
             final int LA26_0 = this.input.LA(1);
@@ -4843,7 +4843,7 @@ public class AntlrPilarLexer extends Lexer {
 
             switch (alt26) {
               case 1:
-              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:979:26: '0' .. '9'
+              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:980:26: '0' .. '9'
               {
                 matchRange('0', '9');
 
@@ -4855,7 +4855,7 @@ public class AntlrPilarLexer extends Lexer {
             }
           } while (true);
 
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:979:37: ( TX_Exponent )?
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:980:37: ( TX_Exponent )?
           int alt27 = 2;
           final int LA27_0 = this.input.LA(1);
 
@@ -4864,7 +4864,7 @@ public class AntlrPilarLexer extends Lexer {
           }
           switch (alt27) {
             case 1:
-            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:979:37: TX_Exponent
+            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:980:37: TX_Exponent
             {
               mTX_Exponent();
 
@@ -4873,7 +4873,7 @@ public class AntlrPilarLexer extends Lexer {
 
           }
 
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:979:50: ( TX_FloatTypeSuffix )?
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:980:50: ( TX_FloatTypeSuffix )?
           int alt28 = 2;
           final int LA28_0 = this.input.LA(1);
 
@@ -4882,7 +4882,7 @@ public class AntlrPilarLexer extends Lexer {
           }
           switch (alt28) {
             case 1:
-            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:979:50: TX_FloatTypeSuffix
+            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:980:50: TX_FloatTypeSuffix
             {
               mTX_FloatTypeSuffix();
 
@@ -4894,9 +4894,9 @@ public class AntlrPilarLexer extends Lexer {
         }
           break;
         case 2:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:980:4: ( '-' )? '.' ( '0' .. '9' )+ ( TX_Exponent )? ( TX_FloatTypeSuffix )?
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:981:4: ( '-' )? '.' ( '0' .. '9' )+ ( TX_Exponent )? ( TX_FloatTypeSuffix )?
         {
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:980:4: ( '-' )?
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:981:4: ( '-' )?
           int alt29 = 2;
           final int LA29_0 = this.input.LA(1);
 
@@ -4905,7 +4905,7 @@ public class AntlrPilarLexer extends Lexer {
           }
           switch (alt29) {
             case 1:
-            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:980:4: '-'
+            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:981:4: '-'
             {
               match('-');
 
@@ -4915,7 +4915,7 @@ public class AntlrPilarLexer extends Lexer {
           }
 
           match('.');
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:980:13: ( '0' .. '9' )+
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:981:13: ( '0' .. '9' )+
           int cnt30 = 0;
           loop30: do {
             int alt30 = 2;
@@ -4927,7 +4927,7 @@ public class AntlrPilarLexer extends Lexer {
 
             switch (alt30) {
               case 1:
-              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:980:14: '0' .. '9'
+              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:981:14: '0' .. '9'
               {
                 matchRange('0', '9');
 
@@ -4945,7 +4945,7 @@ public class AntlrPilarLexer extends Lexer {
             cnt30++;
           } while (true);
 
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:980:25: ( TX_Exponent )?
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:981:25: ( TX_Exponent )?
           int alt31 = 2;
           final int LA31_0 = this.input.LA(1);
 
@@ -4954,7 +4954,7 @@ public class AntlrPilarLexer extends Lexer {
           }
           switch (alt31) {
             case 1:
-            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:980:25: TX_Exponent
+            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:981:25: TX_Exponent
             {
               mTX_Exponent();
 
@@ -4963,7 +4963,7 @@ public class AntlrPilarLexer extends Lexer {
 
           }
 
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:980:38: ( TX_FloatTypeSuffix )?
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:981:38: ( TX_FloatTypeSuffix )?
           int alt32 = 2;
           final int LA32_0 = this.input.LA(1);
 
@@ -4972,7 +4972,7 @@ public class AntlrPilarLexer extends Lexer {
           }
           switch (alt32) {
             case 1:
-            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:980:38: TX_FloatTypeSuffix
+            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:981:38: TX_FloatTypeSuffix
             {
               mTX_FloatTypeSuffix();
 
@@ -4984,9 +4984,9 @@ public class AntlrPilarLexer extends Lexer {
         }
           break;
         case 3:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:981:4: ( '-' )? ( '0' .. '9' )+ TX_Exponent ( TX_FloatTypeSuffix )?
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:982:4: ( '-' )? ( '0' .. '9' )+ TX_Exponent ( TX_FloatTypeSuffix )?
         {
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:981:4: ( '-' )?
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:982:4: ( '-' )?
           int alt33 = 2;
           final int LA33_0 = this.input.LA(1);
 
@@ -4995,7 +4995,7 @@ public class AntlrPilarLexer extends Lexer {
           }
           switch (alt33) {
             case 1:
-            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:981:4: '-'
+            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:982:4: '-'
             {
               match('-');
 
@@ -5004,7 +5004,7 @@ public class AntlrPilarLexer extends Lexer {
 
           }
 
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:981:9: ( '0' .. '9' )+
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:982:9: ( '0' .. '9' )+
           int cnt34 = 0;
           loop34: do {
             int alt34 = 2;
@@ -5016,7 +5016,7 @@ public class AntlrPilarLexer extends Lexer {
 
             switch (alt34) {
               case 1:
-              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:981:10: '0' .. '9'
+              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:982:10: '0' .. '9'
               {
                 matchRange('0', '9');
 
@@ -5035,7 +5035,7 @@ public class AntlrPilarLexer extends Lexer {
           } while (true);
 
           mTX_Exponent();
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:981:33: ( TX_FloatTypeSuffix )?
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:982:33: ( TX_FloatTypeSuffix )?
           int alt35 = 2;
           final int LA35_0 = this.input.LA(1);
 
@@ -5044,7 +5044,7 @@ public class AntlrPilarLexer extends Lexer {
           }
           switch (alt35) {
             case 1:
-            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:981:33: TX_FloatTypeSuffix
+            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:982:33: TX_FloatTypeSuffix
             {
               mTX_FloatTypeSuffix();
 
@@ -5056,9 +5056,9 @@ public class AntlrPilarLexer extends Lexer {
         }
           break;
         case 4:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:982:4: ( '-' )? ( '0' .. '9' )+ TX_FloatTypeSuffix
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:983:4: ( '-' )? ( '0' .. '9' )+ TX_FloatTypeSuffix
         {
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:982:4: ( '-' )?
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:983:4: ( '-' )?
           int alt36 = 2;
           final int LA36_0 = this.input.LA(1);
 
@@ -5067,7 +5067,7 @@ public class AntlrPilarLexer extends Lexer {
           }
           switch (alt36) {
             case 1:
-            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:982:4: '-'
+            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:983:4: '-'
             {
               match('-');
 
@@ -5076,7 +5076,7 @@ public class AntlrPilarLexer extends Lexer {
 
           }
 
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:982:9: ( '0' .. '9' )+
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:983:9: ( '0' .. '9' )+
           int cnt37 = 0;
           loop37: do {
             int alt37 = 2;
@@ -5088,7 +5088,7 @@ public class AntlrPilarLexer extends Lexer {
 
             switch (alt37) {
               case 1:
-              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:982:10: '0' .. '9'
+              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:983:10: '0' .. '9'
               {
                 matchRange('0', '9');
 
@@ -5125,8 +5125,8 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.GLOBALID;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:948:2: ( '@@' ID )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:948:4: '@@' ID
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:949:2: ( '@@' ID )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:949:4: '@@' ID
       {
         match("@@");
 
@@ -5147,8 +5147,8 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.HEX_LIT;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:963:2: ( '0' ( 'x' | 'X' ) ( TX_HexDigit )+ ( TX_IntTypeSuffix )? )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:963:4: '0' ( 'x' | 'X' ) ( TX_HexDigit )+ ( TX_IntTypeSuffix )?
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:964:2: ( '0' ( 'x' | 'X' ) ( TX_HexDigit )+ ( TX_IntTypeSuffix )? )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:964:4: '0' ( 'x' | 'X' ) ( TX_HexDigit )+ ( TX_IntTypeSuffix )?
       {
         match('0');
         if ((this.input.LA(1) == 'X') || (this.input.LA(1) == 'x')) {
@@ -5161,7 +5161,7 @@ public class AntlrPilarLexer extends Lexer {
           throw mse;
         }
 
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:963:18: ( TX_HexDigit )+
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:964:18: ( TX_HexDigit )+
         int cnt14 = 0;
         loop14: do {
           int alt14 = 2;
@@ -5174,7 +5174,7 @@ public class AntlrPilarLexer extends Lexer {
 
           switch (alt14) {
             case 1:
-            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:963:18: TX_HexDigit
+            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:964:18: TX_HexDigit
             {
               mTX_HexDigit();
 
@@ -5192,7 +5192,7 @@ public class AntlrPilarLexer extends Lexer {
           cnt14++;
         } while (true);
 
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:963:31: ( TX_IntTypeSuffix )?
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:964:31: ( TX_IntTypeSuffix )?
         int alt15 = 2;
         final int LA15_0 = this.input.LA(1);
 
@@ -5201,7 +5201,7 @@ public class AntlrPilarLexer extends Lexer {
         }
         switch (alt15) {
           case 1:
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:963:31: TX_IntTypeSuffix
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:964:31: TX_IntTypeSuffix
           {
             mTX_IntTypeSuffix();
 
@@ -5225,7 +5225,7 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.ID;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:920:2: ( ( '^' )? TX_BASICID ( '\\'' )* | '{|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '}' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|}' | '(|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( ')' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|)' | '[|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( ']' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|]' | '<|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '>' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|>' | '+|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '+' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|+' | '-|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '-' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|-' | '*|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '*' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|*' | '.|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '}' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|.' )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:921:2: ( ( '^' )? TX_BASICID ( '\\'' )* | '{|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '}' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|}' | '(|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( ')' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|)' | '[|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( ']' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|]' | '<|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '>' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|>' | '+|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '+' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|+' | '-|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '-' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|-' | '*|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '*' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|*' | '.|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '}' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|.' )
       int alt11 = 9;
       final int LA11_0 = this.input.LA(1);
 
@@ -5264,9 +5264,9 @@ public class AntlrPilarLexer extends Lexer {
       }
       switch (alt11) {
         case 1:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:920:4: ( '^' )? TX_BASICID ( '\\'' )*
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:921:4: ( '^' )? TX_BASICID ( '\\'' )*
         {
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:920:4: ( '^' )?
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:921:4: ( '^' )?
           int alt1 = 2;
           final int LA1_0 = this.input.LA(1);
 
@@ -5275,7 +5275,7 @@ public class AntlrPilarLexer extends Lexer {
           }
           switch (alt1) {
             case 1:
-            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:920:4: '^'
+            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:921:4: '^'
             {
               match('^');
 
@@ -5285,7 +5285,7 @@ public class AntlrPilarLexer extends Lexer {
           }
 
           mTX_BASICID();
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:920:20: ( '\\'' )*
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:921:20: ( '\\'' )*
           loop2: do {
             int alt2 = 2;
             final int LA2_0 = this.input.LA(1);
@@ -5296,7 +5296,7 @@ public class AntlrPilarLexer extends Lexer {
 
             switch (alt2) {
               case 1:
-              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:920:20: '\\''
+              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:921:20: '\\''
               {
                 match('\'');
 
@@ -5311,11 +5311,11 @@ public class AntlrPilarLexer extends Lexer {
         }
           break;
         case 2:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:921:4: '{|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '}' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|}'
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:922:4: '{|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '}' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|}'
         {
           match("{|");
 
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:921:9: (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '}' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )*
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:922:9: (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '}' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )*
           loop3: do {
             int alt3 = 3;
             final int LA3_0 = this.input.LA(1);
@@ -5337,7 +5337,7 @@ public class AntlrPilarLexer extends Lexer {
 
             switch (alt3) {
               case 1:
-              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:921:11: ~ ( '|' | '\\n' | '\\r' | '\\t' )
+              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:922:11: ~ ( '|' | '\\n' | '\\r' | '\\t' )
               {
                 if (((this.input.LA(1) >= '\u0000') && (this.input.LA(1) <= '\b'))
                     || ((this.input.LA(1) >= '\u000B') && (this.input.LA(1) <= '\f'))
@@ -5355,10 +5355,10 @@ public class AntlrPilarLexer extends Lexer {
               }
                 break;
               case 2:
-              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:922:11: ( '|' ~ ( '}' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
+              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:923:11: ( '|' ~ ( '}' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
               {
-                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:922:11: ( '|' ~ ( '}' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
-                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:922:13: '|' ~ ( '}' | '\\r' | '\\t' | '\\u000C' | '\\n' )
+                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:923:11: ( '|' ~ ( '}' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
+                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:923:13: '|' ~ ( '}' | '\\r' | '\\t' | '\\u000C' | '\\n' )
                 {
                   match('|');
                   if (((this.input.LA(1) >= '\u0000') && (this.input.LA(1) <= '\b'))
@@ -5389,11 +5389,11 @@ public class AntlrPilarLexer extends Lexer {
         }
           break;
         case 3:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:924:4: '(|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( ')' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|)'
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:925:4: '(|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( ')' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|)'
         {
           match("(|");
 
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:924:9: (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( ')' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )*
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:925:9: (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( ')' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )*
           loop4: do {
             int alt4 = 3;
             final int LA4_0 = this.input.LA(1);
@@ -5415,7 +5415,7 @@ public class AntlrPilarLexer extends Lexer {
 
             switch (alt4) {
               case 1:
-              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:924:11: ~ ( '|' | '\\n' | '\\r' | '\\t' )
+              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:925:11: ~ ( '|' | '\\n' | '\\r' | '\\t' )
               {
                 if (((this.input.LA(1) >= '\u0000') && (this.input.LA(1) <= '\b'))
                     || ((this.input.LA(1) >= '\u000B') && (this.input.LA(1) <= '\f'))
@@ -5433,10 +5433,10 @@ public class AntlrPilarLexer extends Lexer {
               }
                 break;
               case 2:
-              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:925:11: ( '|' ~ ( ')' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
+              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:926:11: ( '|' ~ ( ')' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
               {
-                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:925:11: ( '|' ~ ( ')' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
-                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:925:13: '|' ~ ( ')' | '\\r' | '\\t' | '\\u000C' | '\\n' )
+                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:926:11: ( '|' ~ ( ')' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
+                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:926:13: '|' ~ ( ')' | '\\r' | '\\t' | '\\u000C' | '\\n' )
                 {
                   match('|');
                   if (((this.input.LA(1) >= '\u0000') && (this.input.LA(1) <= '\b'))
@@ -5467,11 +5467,11 @@ public class AntlrPilarLexer extends Lexer {
         }
           break;
         case 4:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:927:4: '[|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( ']' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|]'
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:928:4: '[|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( ']' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|]'
         {
           match("[|");
 
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:927:9: (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( ']' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )*
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:928:9: (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( ']' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )*
           loop5: do {
             int alt5 = 3;
             final int LA5_0 = this.input.LA(1);
@@ -5493,7 +5493,7 @@ public class AntlrPilarLexer extends Lexer {
 
             switch (alt5) {
               case 1:
-              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:927:11: ~ ( '|' | '\\n' | '\\r' | '\\t' )
+              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:928:11: ~ ( '|' | '\\n' | '\\r' | '\\t' )
               {
                 if (((this.input.LA(1) >= '\u0000') && (this.input.LA(1) <= '\b'))
                     || ((this.input.LA(1) >= '\u000B') && (this.input.LA(1) <= '\f'))
@@ -5511,10 +5511,10 @@ public class AntlrPilarLexer extends Lexer {
               }
                 break;
               case 2:
-              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:928:11: ( '|' ~ ( ']' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
+              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:929:11: ( '|' ~ ( ']' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
               {
-                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:928:11: ( '|' ~ ( ']' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
-                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:928:13: '|' ~ ( ']' | '\\r' | '\\t' | '\\u000C' | '\\n' )
+                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:929:11: ( '|' ~ ( ']' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
+                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:929:13: '|' ~ ( ']' | '\\r' | '\\t' | '\\u000C' | '\\n' )
                 {
                   match('|');
                   if (((this.input.LA(1) >= '\u0000') && (this.input.LA(1) <= '\b'))
@@ -5545,11 +5545,11 @@ public class AntlrPilarLexer extends Lexer {
         }
           break;
         case 5:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:930:4: '<|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '>' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|>'
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:931:4: '<|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '>' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|>'
         {
           match("<|");
 
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:930:9: (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '>' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )*
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:931:9: (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '>' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )*
           loop6: do {
             int alt6 = 3;
             final int LA6_0 = this.input.LA(1);
@@ -5571,7 +5571,7 @@ public class AntlrPilarLexer extends Lexer {
 
             switch (alt6) {
               case 1:
-              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:930:11: ~ ( '|' | '\\n' | '\\r' | '\\t' )
+              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:931:11: ~ ( '|' | '\\n' | '\\r' | '\\t' )
               {
                 if (((this.input.LA(1) >= '\u0000') && (this.input.LA(1) <= '\b'))
                     || ((this.input.LA(1) >= '\u000B') && (this.input.LA(1) <= '\f'))
@@ -5589,10 +5589,10 @@ public class AntlrPilarLexer extends Lexer {
               }
                 break;
               case 2:
-              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:931:11: ( '|' ~ ( '>' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
+              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:932:11: ( '|' ~ ( '>' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
               {
-                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:931:11: ( '|' ~ ( '>' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
-                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:931:13: '|' ~ ( '>' | '\\r' | '\\t' | '\\u000C' | '\\n' )
+                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:932:11: ( '|' ~ ( '>' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
+                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:932:13: '|' ~ ( '>' | '\\r' | '\\t' | '\\u000C' | '\\n' )
                 {
                   match('|');
                   if (((this.input.LA(1) >= '\u0000') && (this.input.LA(1) <= '\b'))
@@ -5623,11 +5623,11 @@ public class AntlrPilarLexer extends Lexer {
         }
           break;
         case 6:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:933:4: '+|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '+' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|+'
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:934:4: '+|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '+' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|+'
         {
           match("+|");
 
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:933:9: (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '+' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )*
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:934:9: (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '+' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )*
           loop7: do {
             int alt7 = 3;
             final int LA7_0 = this.input.LA(1);
@@ -5649,7 +5649,7 @@ public class AntlrPilarLexer extends Lexer {
 
             switch (alt7) {
               case 1:
-              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:933:11: ~ ( '|' | '\\n' | '\\r' | '\\t' )
+              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:934:11: ~ ( '|' | '\\n' | '\\r' | '\\t' )
               {
                 if (((this.input.LA(1) >= '\u0000') && (this.input.LA(1) <= '\b'))
                     || ((this.input.LA(1) >= '\u000B') && (this.input.LA(1) <= '\f'))
@@ -5667,10 +5667,10 @@ public class AntlrPilarLexer extends Lexer {
               }
                 break;
               case 2:
-              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:934:11: ( '|' ~ ( '+' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
+              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:935:11: ( '|' ~ ( '+' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
               {
-                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:934:11: ( '|' ~ ( '+' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
-                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:934:13: '|' ~ ( '+' | '\\r' | '\\t' | '\\u000C' | '\\n' )
+                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:935:11: ( '|' ~ ( '+' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
+                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:935:13: '|' ~ ( '+' | '\\r' | '\\t' | '\\u000C' | '\\n' )
                 {
                   match('|');
                   if (((this.input.LA(1) >= '\u0000') && (this.input.LA(1) <= '\b'))
@@ -5701,11 +5701,11 @@ public class AntlrPilarLexer extends Lexer {
         }
           break;
         case 7:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:936:4: '-|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '-' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|-'
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:937:4: '-|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '-' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|-'
         {
           match("-|");
 
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:936:9: (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '-' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )*
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:937:9: (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '-' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )*
           loop8: do {
             int alt8 = 3;
             final int LA8_0 = this.input.LA(1);
@@ -5727,7 +5727,7 @@ public class AntlrPilarLexer extends Lexer {
 
             switch (alt8) {
               case 1:
-              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:936:11: ~ ( '|' | '\\n' | '\\r' | '\\t' )
+              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:937:11: ~ ( '|' | '\\n' | '\\r' | '\\t' )
               {
                 if (((this.input.LA(1) >= '\u0000') && (this.input.LA(1) <= '\b'))
                     || ((this.input.LA(1) >= '\u000B') && (this.input.LA(1) <= '\f'))
@@ -5745,10 +5745,10 @@ public class AntlrPilarLexer extends Lexer {
               }
                 break;
               case 2:
-              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:937:11: ( '|' ~ ( '-' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
+              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:938:11: ( '|' ~ ( '-' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
               {
-                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:937:11: ( '|' ~ ( '-' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
-                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:937:13: '|' ~ ( '-' | '\\r' | '\\t' | '\\u000C' | '\\n' )
+                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:938:11: ( '|' ~ ( '-' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
+                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:938:13: '|' ~ ( '-' | '\\r' | '\\t' | '\\u000C' | '\\n' )
                 {
                   match('|');
                   if (((this.input.LA(1) >= '\u0000') && (this.input.LA(1) <= '\b'))
@@ -5779,11 +5779,11 @@ public class AntlrPilarLexer extends Lexer {
         }
           break;
         case 8:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:939:4: '*|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '*' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|*'
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:940:4: '*|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '*' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|*'
         {
           match("*|");
 
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:939:9: (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '*' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )*
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:940:9: (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '*' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )*
           loop9: do {
             int alt9 = 3;
             final int LA9_0 = this.input.LA(1);
@@ -5805,7 +5805,7 @@ public class AntlrPilarLexer extends Lexer {
 
             switch (alt9) {
               case 1:
-              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:939:11: ~ ( '|' | '\\n' | '\\r' | '\\t' )
+              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:940:11: ~ ( '|' | '\\n' | '\\r' | '\\t' )
               {
                 if (((this.input.LA(1) >= '\u0000') && (this.input.LA(1) <= '\b'))
                     || ((this.input.LA(1) >= '\u000B') && (this.input.LA(1) <= '\f'))
@@ -5823,10 +5823,10 @@ public class AntlrPilarLexer extends Lexer {
               }
                 break;
               case 2:
-              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:940:11: ( '|' ~ ( '*' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
+              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:941:11: ( '|' ~ ( '*' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
               {
-                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:940:11: ( '|' ~ ( '*' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
-                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:940:13: '|' ~ ( '*' | '\\r' | '\\t' | '\\u000C' | '\\n' )
+                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:941:11: ( '|' ~ ( '*' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
+                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:941:13: '|' ~ ( '*' | '\\r' | '\\t' | '\\u000C' | '\\n' )
                 {
                   match('|');
                   if (((this.input.LA(1) >= '\u0000') && (this.input.LA(1) <= '\b'))
@@ -5857,11 +5857,11 @@ public class AntlrPilarLexer extends Lexer {
         }
           break;
         case 9:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:942:4: '.|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '}' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|.'
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:943:4: '.|' (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '}' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )* '|.'
         {
           match(".|");
 
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:942:9: (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '}' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )*
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:943:9: (~ ( '|' | '\\n' | '\\r' | '\\t' ) | ( '|' ~ ( '}' | '\\r' | '\\t' | '\\u000C' | '\\n' ) ) )*
           loop10: do {
             int alt10 = 3;
             final int LA10_0 = this.input.LA(1);
@@ -5892,7 +5892,7 @@ public class AntlrPilarLexer extends Lexer {
 
             switch (alt10) {
               case 1:
-              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:942:11: ~ ( '|' | '\\n' | '\\r' | '\\t' )
+              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:943:11: ~ ( '|' | '\\n' | '\\r' | '\\t' )
               {
                 if (((this.input.LA(1) >= '\u0000') && (this.input.LA(1) <= '\b'))
                     || ((this.input.LA(1) >= '\u000B') && (this.input.LA(1) <= '\f'))
@@ -5910,10 +5910,10 @@ public class AntlrPilarLexer extends Lexer {
               }
                 break;
               case 2:
-              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:943:11: ( '|' ~ ( '}' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
+              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:944:11: ( '|' ~ ( '}' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
               {
-                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:943:11: ( '|' ~ ( '}' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
-                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:943:13: '|' ~ ( '}' | '\\r' | '\\t' | '\\u000C' | '\\n' )
+                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:944:11: ( '|' ~ ( '}' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
+                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:944:13: '|' ~ ( '}' | '\\r' | '\\t' | '\\u000C' | '\\n' )
                 {
                   match('|');
                   if (((this.input.LA(1) >= '\u0000') && (this.input.LA(1) <= '\b'))
@@ -5958,12 +5958,12 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.LINE_COMMENT;
       int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1159:2: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1159:4: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1160:2: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1160:4: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
       {
         match("//");
 
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1159:9: (~ ( '\\n' | '\\r' ) )*
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1160:9: (~ ( '\\n' | '\\r' ) )*
         loop61: do {
           int alt61 = 2;
           final int LA61_0 = this.input.LA(1);
@@ -5975,7 +5975,7 @@ public class AntlrPilarLexer extends Lexer {
 
           switch (alt61) {
             case 1:
-            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1159:9: ~ ( '\\n' | '\\r' )
+            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1160:9: ~ ( '\\n' | '\\r' )
             {
               if (((this.input.LA(1) >= '\u0000') && (this.input.LA(1) <= '\t'))
                   || ((this.input.LA(1) >= '\u000B') && (this.input.LA(1) <= '\f'))
@@ -5997,7 +5997,7 @@ public class AntlrPilarLexer extends Lexer {
           }
         } while (true);
 
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1159:23: ( '\\r' )?
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1160:23: ( '\\r' )?
         int alt62 = 2;
         final int LA62_0 = this.input.LA(1);
 
@@ -6006,7 +6006,7 @@ public class AntlrPilarLexer extends Lexer {
         }
         switch (alt62) {
           case 1:
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1159:23: '\\r'
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1160:23: '\\r'
           {
             match('\r');
 
@@ -6033,11 +6033,11 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.LOCID;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:955:7: ( '#' ( ID ( '.' )? )? )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:955:9: '#' ( ID ( '.' )? )?
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:956:7: ( '#' ( ID ( '.' )? )? )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:956:9: '#' ( ID ( '.' )? )?
       {
         match('#');
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:955:13: ( ID ( '.' )? )?
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:956:13: ( ID ( '.' )? )?
         int alt13 = 2;
         final int LA13_0 = this.input.LA(1);
 
@@ -6058,10 +6058,10 @@ public class AntlrPilarLexer extends Lexer {
         }
         switch (alt13) {
           case 1:
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:955:15: ID ( '.' )?
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:956:15: ID ( '.' )?
           {
             mID();
-            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:955:18: ( '.' )?
+            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:956:18: ( '.' )?
             int alt12 = 2;
             final int LA12_0 = this.input.LA(1);
 
@@ -6070,7 +6070,7 @@ public class AntlrPilarLexer extends Lexer {
             }
             switch (alt12) {
               case 1:
-              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:955:18: '.'
+              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:956:18: '.'
               {
                 match('.');
 
@@ -6099,7 +6099,7 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.MUL_OP;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1036:2: ( ( '/' | '%' ) TX_OPID_SUFFIX | '*' TX_OPID_CHAR TX_OPID_SUFFIX )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1037:2: ( ( '/' | '%' ) TX_OPID_SUFFIX | '*' TX_OPID_CHAR TX_OPID_SUFFIX )
       int alt49 = 2;
       final int LA49_0 = this.input.LA(1);
 
@@ -6115,7 +6115,7 @@ public class AntlrPilarLexer extends Lexer {
       }
       switch (alt49) {
         case 1:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1036:4: ( '/' | '%' ) TX_OPID_SUFFIX
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1037:4: ( '/' | '%' ) TX_OPID_SUFFIX
         {
           if ((this.input.LA(1) == '%') || (this.input.LA(1) == '/')) {
             this.input.consume();
@@ -6132,7 +6132,7 @@ public class AntlrPilarLexer extends Lexer {
         }
           break;
         case 2:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1037:4: '*' TX_OPID_CHAR TX_OPID_SUFFIX
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1038:4: '*' TX_OPID_CHAR TX_OPID_SUFFIX
         {
           match('*');
           mTX_OPID_CHAR();
@@ -6155,11 +6155,11 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.OCT_LIT;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:971:2: ( '0' ( '0' .. '7' )+ ( TX_IntTypeSuffix )? )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:971:4: '0' ( '0' .. '7' )+ ( TX_IntTypeSuffix )?
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:972:2: ( '0' ( '0' .. '7' )+ ( TX_IntTypeSuffix )? )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:972:4: '0' ( '0' .. '7' )+ ( TX_IntTypeSuffix )?
       {
         match('0');
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:971:8: ( '0' .. '7' )+
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:972:8: ( '0' .. '7' )+
         int cnt20 = 0;
         loop20: do {
           int alt20 = 2;
@@ -6171,7 +6171,7 @@ public class AntlrPilarLexer extends Lexer {
 
           switch (alt20) {
             case 1:
-            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:971:9: '0' .. '7'
+            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:972:9: '0' .. '7'
             {
               matchRange('0', '7');
 
@@ -6189,7 +6189,7 @@ public class AntlrPilarLexer extends Lexer {
           cnt20++;
         } while (true);
 
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:971:20: ( TX_IntTypeSuffix )?
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:972:20: ( TX_IntTypeSuffix )?
         int alt21 = 2;
         final int LA21_0 = this.input.LA(1);
 
@@ -6198,7 +6198,7 @@ public class AntlrPilarLexer extends Lexer {
         }
         switch (alt21) {
           case 1:
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:971:20: TX_IntTypeSuffix
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:972:20: TX_IntTypeSuffix
           {
             mTX_IntTypeSuffix();
 
@@ -6222,8 +6222,8 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.OR_OP;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1011:7: ( '^|' TX_OPID_SUFFIX )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1011:9: '^|' TX_OPID_SUFFIX
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1012:7: ( '^|' TX_OPID_SUFFIX )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1012:9: '^|' TX_OPID_SUFFIX
       {
         match("^|");
 
@@ -6244,10 +6244,10 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.RATIONAL_LIT;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:986:2: ( ( '-' )? ( '0' | '1' .. '9' ( '0' .. '9' )* ) '/' ( '1' .. '9' ( '0' .. '9' )* ) )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:986:4: ( '-' )? ( '0' | '1' .. '9' ( '0' .. '9' )* ) '/' ( '1' .. '9' ( '0' .. '9' )* )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:987:2: ( ( '-' )? ( '0' | '1' .. '9' ( '0' .. '9' )* ) '/' ( '1' .. '9' ( '0' .. '9' )* ) )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:987:4: ( '-' )? ( '0' | '1' .. '9' ( '0' .. '9' )* ) '/' ( '1' .. '9' ( '0' .. '9' )* )
       {
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:986:4: ( '-' )?
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:987:4: ( '-' )?
         int alt39 = 2;
         final int LA39_0 = this.input.LA(1);
 
@@ -6256,7 +6256,7 @@ public class AntlrPilarLexer extends Lexer {
         }
         switch (alt39) {
           case 1:
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:986:4: '-'
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:987:4: '-'
           {
             match('-');
 
@@ -6265,7 +6265,7 @@ public class AntlrPilarLexer extends Lexer {
 
         }
 
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:986:9: ( '0' | '1' .. '9' ( '0' .. '9' )* )
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:987:9: ( '0' | '1' .. '9' ( '0' .. '9' )* )
         int alt41 = 2;
         final int LA41_0 = this.input.LA(1);
 
@@ -6281,17 +6281,17 @@ public class AntlrPilarLexer extends Lexer {
         }
         switch (alt41) {
           case 1:
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:986:10: '0'
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:987:10: '0'
           {
             match('0');
 
           }
             break;
           case 2:
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:986:16: '1' .. '9' ( '0' .. '9' )*
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:987:16: '1' .. '9' ( '0' .. '9' )*
           {
             matchRange('1', '9');
-            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:986:25: ( '0' .. '9' )*
+            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:987:25: ( '0' .. '9' )*
             loop40: do {
               int alt40 = 2;
               final int LA40_0 = this.input.LA(1);
@@ -6302,7 +6302,7 @@ public class AntlrPilarLexer extends Lexer {
 
               switch (alt40) {
                 case 1:
-                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:986:25: '0' .. '9'
+                // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:987:25: '0' .. '9'
                 {
                   matchRange('0', '9');
 
@@ -6320,11 +6320,11 @@ public class AntlrPilarLexer extends Lexer {
         }
 
         match('/');
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:986:40: ( '1' .. '9' ( '0' .. '9' )* )
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:986:42: '1' .. '9' ( '0' .. '9' )*
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:987:40: ( '1' .. '9' ( '0' .. '9' )* )
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:987:42: '1' .. '9' ( '0' .. '9' )*
         {
           matchRange('1', '9');
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:986:51: ( '0' .. '9' )*
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:987:51: ( '0' .. '9' )*
           loop42: do {
             int alt42 = 2;
             final int LA42_0 = this.input.LA(1);
@@ -6335,7 +6335,7 @@ public class AntlrPilarLexer extends Lexer {
 
             switch (alt42) {
               case 1:
-              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:986:51: '0' .. '9'
+              // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:987:51: '0' .. '9'
               {
                 matchRange('0', '9');
 
@@ -6364,12 +6364,12 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.RAW_LIT;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1154:9: ( '\"\"\"' ( options {greedy=false; } : . )* '\"\"\"' )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1154:11: '\"\"\"' ( options {greedy=false; } : . )* '\"\"\"'
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1155:9: ( '\"\"\"' ( options {greedy=false; } : . )* '\"\"\"' )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1155:11: '\"\"\"' ( options {greedy=false; } : . )* '\"\"\"'
       {
         match("\"\"\"");
 
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1154:17: ( options {greedy=false; } : . )*
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1155:17: ( options {greedy=false; } : . )*
         loop59: do {
           int alt59 = 2;
           final int LA59_0 = this.input.LA(1);
@@ -6396,7 +6396,7 @@ public class AntlrPilarLexer extends Lexer {
 
           switch (alt59) {
             case 1:
-            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1154:45: .
+            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1155:45: .
             {
               matchAny();
 
@@ -6425,7 +6425,7 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.REL_OP;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1022:2: ( '<' TX_OPID_CHARMLT TX_OPID_SUFFIX | '>' TX_OPID_CHARMGT TX_OPID_SUFFIX )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1023:2: ( '<' TX_OPID_CHARMLT TX_OPID_SUFFIX | '>' TX_OPID_CHARMGT TX_OPID_SUFFIX )
       int alt46 = 2;
       final int LA46_0 = this.input.LA(1);
 
@@ -6441,7 +6441,7 @@ public class AntlrPilarLexer extends Lexer {
       }
       switch (alt46) {
         case 1:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1022:4: '<' TX_OPID_CHARMLT TX_OPID_SUFFIX
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1023:4: '<' TX_OPID_CHARMLT TX_OPID_SUFFIX
         {
           match('<');
           mTX_OPID_CHARMLT();
@@ -6450,7 +6450,7 @@ public class AntlrPilarLexer extends Lexer {
         }
           break;
         case 2:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1023:4: '>' TX_OPID_CHARMGT TX_OPID_SUFFIX
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1024:4: '>' TX_OPID_CHARMGT TX_OPID_SUFFIX
         {
           match('>');
           mTX_OPID_CHARMGT();
@@ -6473,7 +6473,7 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.SHIFT_OP;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1027:2: ( '^<' | '^>>' TX_OPID_SUFFIX | '^>' ( TX_OPID_CHARMGT TX_OPID_SUFFIX )? )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1028:2: ( '^<' | '^>>' TX_OPID_SUFFIX | '^>' ( TX_OPID_CHARMGT TX_OPID_SUFFIX )? )
       int alt48 = 3;
       final int LA48_0 = this.input.LA(1);
 
@@ -6504,14 +6504,14 @@ public class AntlrPilarLexer extends Lexer {
       }
       switch (alt48) {
         case 1:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1027:4: '^<'
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1028:4: '^<'
         {
           match("^<");
 
         }
           break;
         case 2:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1027:11: '^>>' TX_OPID_SUFFIX
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1028:11: '^>>' TX_OPID_SUFFIX
         {
           match("^>>");
 
@@ -6520,11 +6520,11 @@ public class AntlrPilarLexer extends Lexer {
         }
           break;
         case 3:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1028:4: '^>' ( TX_OPID_CHARMGT TX_OPID_SUFFIX )?
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1029:4: '^>' ( TX_OPID_CHARMGT TX_OPID_SUFFIX )?
         {
           match("^>");
 
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1028:9: ( TX_OPID_CHARMGT TX_OPID_SUFFIX )?
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1029:9: ( TX_OPID_CHARMGT TX_OPID_SUFFIX )?
           int alt47 = 2;
           final int LA47_0 = this.input.LA(1);
 
@@ -6536,7 +6536,7 @@ public class AntlrPilarLexer extends Lexer {
           }
           switch (alt47) {
             case 1:
-            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1028:11: TX_OPID_CHARMGT TX_OPID_SUFFIX
+            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1029:11: TX_OPID_CHARMGT TX_OPID_SUFFIX
             {
               mTX_OPID_CHARMGT();
               mTX_OPID_SUFFIX();
@@ -6563,11 +6563,11 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.STRING_LIT;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:994:2: ( '\"' ( TX_EscapeSequence | ~ ( '\\\\' | '\"' | '\\n' ) )* '\"' )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:994:4: '\"' ( TX_EscapeSequence | ~ ( '\\\\' | '\"' | '\\n' ) )* '\"'
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:995:2: ( '\"' ( TX_EscapeSequence | ~ ( '\\\\' | '\"' | '\\n' ) )* '\"' )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:995:4: '\"' ( TX_EscapeSequence | ~ ( '\\\\' | '\"' | '\\n' ) )* '\"'
       {
         match('\"');
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:994:8: ( TX_EscapeSequence | ~ ( '\\\\' | '\"' | '\\n' ) )*
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:995:8: ( TX_EscapeSequence | ~ ( '\\\\' | '\"' | '\\n' ) )*
         loop44: do {
           int alt44 = 3;
           final int LA44_0 = this.input.LA(1);
@@ -6582,14 +6582,14 @@ public class AntlrPilarLexer extends Lexer {
 
           switch (alt44) {
             case 1:
-            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:994:10: TX_EscapeSequence
+            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:995:10: TX_EscapeSequence
             {
               mTX_EscapeSequence();
 
             }
               break;
             case 2:
-            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:994:30: ~ ( '\\\\' | '\"' | '\\n' )
+            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:995:30: ~ ( '\\\\' | '\"' | '\\n' )
             {
               if (((this.input.LA(1) >= '\u0000') && (this.input.LA(1) <= '\t'))
                   || ((this.input.LA(1) >= '\u000B') && (this.input.LA(1) <= '!'))
@@ -6629,8 +6629,8 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.SYMBOL_LIT;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:958:2: ( ':' ID )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:958:4: ':' ID
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:959:2: ( ':' ID )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:959:4: ':' ID
       {
         match(':');
         mID();
@@ -8475,11 +8475,11 @@ public class AntlrPilarLexer extends Lexer {
   // $ANTLR start "TX_BASICID"
   public final void mTX_BASICID() throws RecognitionException {
     try {
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1070:2: ( TX_Letter ( TX_Letter | TX_JavaIDDigit )* )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1070:4: TX_Letter ( TX_Letter | TX_JavaIDDigit )*
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1071:2: ( TX_Letter ( TX_Letter | TX_JavaIDDigit )* )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1071:4: TX_Letter ( TX_Letter | TX_JavaIDDigit )*
       {
         mTX_Letter();
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1070:14: ( TX_Letter | TX_JavaIDDigit )*
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1071:14: ( TX_Letter | TX_JavaIDDigit )*
         loop53: do {
           int alt53 = 2;
           final int LA53_0 = this.input.LA(1);
@@ -8542,7 +8542,7 @@ public class AntlrPilarLexer extends Lexer {
   // $ANTLR start "TX_EscapeSequence"
   public final void mTX_EscapeSequence() throws RecognitionException {
     try {
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1096:2: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | TX_UnicodeEscape | TX_OctalEscape )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1097:2: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | TX_UnicodeEscape | TX_OctalEscape )
       int alt57 = 3;
       final int LA57_0 = this.input.LA(1);
 
@@ -8589,7 +8589,7 @@ public class AntlrPilarLexer extends Lexer {
       }
       switch (alt57) {
         case 1:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1096:4: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1097:4: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
         {
           match('\\');
           if ((this.input.LA(1) == '\"') || (this.input.LA(1) == '\'')
@@ -8608,14 +8608,14 @@ public class AntlrPilarLexer extends Lexer {
         }
           break;
         case 2:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1097:4: TX_UnicodeEscape
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1098:4: TX_UnicodeEscape
         {
           mTX_UnicodeEscape();
 
         }
           break;
         case 3:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1098:4: TX_OctalEscape
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1099:4: TX_OctalEscape
         {
           mTX_OctalEscape();
 
@@ -8631,8 +8631,8 @@ public class AntlrPilarLexer extends Lexer {
   // $ANTLR start "TX_Exponent"
   public final void mTX_Exponent() throws RecognitionException {
     try {
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1081:2: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1081:4: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1082:2: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1082:4: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
       {
         if ((this.input.LA(1) == 'E') || (this.input.LA(1) == 'e')) {
           this.input.consume();
@@ -8644,7 +8644,7 @@ public class AntlrPilarLexer extends Lexer {
           throw mse;
         }
 
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1081:14: ( '+' | '-' )?
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1082:14: ( '+' | '-' )?
         int alt54 = 2;
         final int LA54_0 = this.input.LA(1);
 
@@ -8670,7 +8670,7 @@ public class AntlrPilarLexer extends Lexer {
 
         }
 
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1081:25: ( '0' .. '9' )+
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1082:25: ( '0' .. '9' )+
         int cnt55 = 0;
         loop55: do {
           int alt55 = 2;
@@ -8682,7 +8682,7 @@ public class AntlrPilarLexer extends Lexer {
 
           switch (alt55) {
             case 1:
-            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1081:26: '0' .. '9'
+            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1082:26: '0' .. '9'
             {
               matchRange('0', '9');
 
@@ -8710,8 +8710,8 @@ public class AntlrPilarLexer extends Lexer {
   // $ANTLR start "TX_FloatTypeSuffix"
   public final void mTX_FloatTypeSuffix() throws RecognitionException {
     try {
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1086:2: ( ( 'f' | 'F' | 'd' | 'D' ) )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1086:4: ( 'f' | 'F' | 'd' | 'D' )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1087:2: ( ( 'f' | 'F' | 'd' | 'D' ) )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1087:4: ( 'f' | 'F' | 'd' | 'D' )
       {
         if ((this.input.LA(1) == 'D') || (this.input.LA(1) == 'F')
             || (this.input.LA(1) == 'd') || (this.input.LA(1) == 'f')) {
@@ -8734,8 +8734,8 @@ public class AntlrPilarLexer extends Lexer {
   // $ANTLR start "TX_HexDigit"
   public final void mTX_HexDigit() throws RecognitionException {
     try {
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1075:2: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1075:4: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1076:2: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1076:4: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
       {
         if (((this.input.LA(1) >= '0') && (this.input.LA(1) <= '9'))
             || ((this.input.LA(1) >= 'A') && (this.input.LA(1) <= 'F'))
@@ -8759,10 +8759,10 @@ public class AntlrPilarLexer extends Lexer {
   // $ANTLR start "TX_IntTypeSuffix"
   public final void mTX_IntTypeSuffix() throws RecognitionException {
     try {
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1091:2: ( ( 'l' | 'L' | 'ii' | 'II' | 'i' | 'I' ) )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1091:4: ( 'l' | 'L' | 'ii' | 'II' | 'i' | 'I' )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1092:2: ( ( 'l' | 'L' | 'ii' | 'II' | 'i' | 'I' ) )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1092:4: ( 'l' | 'L' | 'ii' | 'II' | 'i' | 'I' )
       {
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1091:4: ( 'l' | 'L' | 'ii' | 'II' | 'i' | 'I' )
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1092:4: ( 'l' | 'L' | 'ii' | 'II' | 'i' | 'I' )
         int alt56 = 6;
         switch (this.input.LA(1)) {
           case 'l': {
@@ -8802,42 +8802,42 @@ public class AntlrPilarLexer extends Lexer {
 
         switch (alt56) {
           case 1:
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1091:5: 'l'
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1092:5: 'l'
           {
             match('l');
 
           }
             break;
           case 2:
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1091:9: 'L'
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1092:9: 'L'
           {
             match('L');
 
           }
             break;
           case 3:
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1091:13: 'ii'
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1092:13: 'ii'
           {
             match("ii");
 
           }
             break;
           case 4:
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1091:18: 'II'
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1092:18: 'II'
           {
             match("II");
 
           }
             break;
           case 5:
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1091:23: 'i'
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1092:23: 'i'
           {
             match('i');
 
           }
             break;
           case 6:
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1091:27: 'I'
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1092:27: 'I'
           {
             match('I');
 
@@ -8856,7 +8856,7 @@ public class AntlrPilarLexer extends Lexer {
   // $ANTLR start "TX_JavaIDDigit"
   public final void mTX_JavaIDDigit() throws RecognitionException {
     try {
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1135:2: ( '\\u0030' .. '\\u0039' | '\\u0660' .. '\\u0669' | '\\u06f0' .. '\\u06f9' | '\\u0966' .. '\\u096f' | '\\u09e6' .. '\\u09ef' | '\\u0a66' .. '\\u0a6f' | '\\u0ae6' .. '\\u0aef' | '\\u0b66' .. '\\u0b6f' | '\\u0be7' .. '\\u0bef' | '\\u0c66' .. '\\u0c6f' | '\\u0ce6' .. '\\u0cef' | '\\u0d66' .. '\\u0d6f' | '\\u0e50' .. '\\u0e59' | '\\u0ed0' .. '\\u0ed9' | '\\u1040' .. '\\u1049' )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1136:2: ( '\\u0030' .. '\\u0039' | '\\u0660' .. '\\u0669' | '\\u06f0' .. '\\u06f9' | '\\u0966' .. '\\u096f' | '\\u09e6' .. '\\u09ef' | '\\u0a66' .. '\\u0a6f' | '\\u0ae6' .. '\\u0aef' | '\\u0b66' .. '\\u0b6f' | '\\u0be7' .. '\\u0bef' | '\\u0c66' .. '\\u0c6f' | '\\u0ce6' .. '\\u0cef' | '\\u0d66' .. '\\u0d6f' | '\\u0e50' .. '\\u0e59' | '\\u0ed0' .. '\\u0ed9' | '\\u1040' .. '\\u1049' )
       // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:
       {
         if (((this.input.LA(1) >= '0') && (this.input.LA(1) <= '9'))
@@ -8893,7 +8893,7 @@ public class AntlrPilarLexer extends Lexer {
   // $ANTLR start "TX_Letter"
   public final void mTX_Letter() throws RecognitionException {
     try {
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1118:2: ( '\\u0024' | '\\u0041' .. '\\u005a' | '\\u005f' | '\\u0061' .. '\\u007a' | '\\u00c0' .. '\\u00d6' | '\\u00d8' .. '\\u00f6' | '\\u00f8' .. '\\u00ff' | '\\u0100' .. '\\u1fff' | '\\u3040' .. '\\u318f' | '\\u3300' .. '\\u337f' | '\\u3400' .. '\\u3d2d' | '\\u4e00' .. '\\u9fff' | '\\uf900' .. '\\ufaff' )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1119:2: ( '\\u0024' | '\\u0041' .. '\\u005a' | '\\u005f' | '\\u0061' .. '\\u007a' | '\\u00c0' .. '\\u00d6' | '\\u00d8' .. '\\u00f6' | '\\u00f8' .. '\\u00ff' | '\\u0100' .. '\\u1fff' | '\\u3040' .. '\\u318f' | '\\u3300' .. '\\u337f' | '\\u3400' .. '\\u3d2d' | '\\u4e00' .. '\\u9fff' | '\\uf900' .. '\\ufaff' )
       // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:
       {
         if ((this.input.LA(1) == '$')
@@ -8927,7 +8927,7 @@ public class AntlrPilarLexer extends Lexer {
   // $ANTLR start "TX_OctalEscape"
   public final void mTX_OctalEscape() throws RecognitionException {
     try {
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1103:2: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1104:2: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
       int alt58 = 3;
       final int LA58_0 = this.input.LA(1);
 
@@ -8970,40 +8970,13 @@ public class AntlrPilarLexer extends Lexer {
       }
       switch (alt58) {
         case 1:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1103:4: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1104:4: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
         {
           match('\\');
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1103:9: ( '0' .. '3' )
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1103:10: '0' .. '3'
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1104:9: ( '0' .. '3' )
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1104:10: '0' .. '3'
           {
             matchRange('0', '3');
-
-          }
-
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1103:20: ( '0' .. '7' )
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1103:21: '0' .. '7'
-          {
-            matchRange('0', '7');
-
-          }
-
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1103:31: ( '0' .. '7' )
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1103:32: '0' .. '7'
-          {
-            matchRange('0', '7');
-
-          }
-
-        }
-          break;
-        case 2:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1104:4: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
-        {
-          match('\\');
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1104:9: ( '0' .. '7' )
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1104:10: '0' .. '7'
-          {
-            matchRange('0', '7');
 
           }
 
@@ -9014,14 +8987,41 @@ public class AntlrPilarLexer extends Lexer {
 
           }
 
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1104:31: ( '0' .. '7' )
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1104:32: '0' .. '7'
+          {
+            matchRange('0', '7');
+
+          }
+
         }
           break;
-        case 3:
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1105:4: '\\\\' ( '0' .. '7' )
+        case 2:
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1105:4: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
         {
           match('\\');
           // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1105:9: ( '0' .. '7' )
           // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1105:10: '0' .. '7'
+          {
+            matchRange('0', '7');
+
+          }
+
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1105:20: ( '0' .. '7' )
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1105:21: '0' .. '7'
+          {
+            matchRange('0', '7');
+
+          }
+
+        }
+          break;
+        case 3:
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1106:4: '\\\\' ( '0' .. '7' )
+        {
+          match('\\');
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1106:9: ( '0' .. '7' )
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1106:10: '0' .. '7'
           {
             matchRange('0', '7');
 
@@ -9040,8 +9040,8 @@ public class AntlrPilarLexer extends Lexer {
   // $ANTLR start "TX_OPID_CHAR"
   public final void mTX_OPID_CHAR() throws RecognitionException {
     try {
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1055:2: ( ( '+' | '-' | '/' | '\\\\' | '*' | '%' | '&' | '|' | '?' | '>' | '<' | '=' | '~' ) )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1055:4: ( '+' | '-' | '/' | '\\\\' | '*' | '%' | '&' | '|' | '?' | '>' | '<' | '=' | '~' )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1056:2: ( ( '+' | '-' | '/' | '\\\\' | '*' | '%' | '&' | '|' | '?' | '>' | '<' | '=' | '~' ) )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1056:4: ( '+' | '-' | '/' | '\\\\' | '*' | '%' | '&' | '|' | '?' | '>' | '<' | '=' | '~' )
       {
         if (((this.input.LA(1) >= '%') && (this.input.LA(1) <= '&'))
             || ((this.input.LA(1) >= '*') && (this.input.LA(1) <= '+'))
@@ -9068,8 +9068,8 @@ public class AntlrPilarLexer extends Lexer {
   // $ANTLR start "TX_OPID_CHARMGT"
   public final void mTX_OPID_CHARMGT() throws RecognitionException {
     try {
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1060:2: ( ( '+' | '-' | '/' | '\\\\' | '*' | '%' | '&' | '|' | '?' | '<' | '=' | '~' ) )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1060:4: ( '+' | '-' | '/' | '\\\\' | '*' | '%' | '&' | '|' | '?' | '<' | '=' | '~' )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1061:2: ( ( '+' | '-' | '/' | '\\\\' | '*' | '%' | '&' | '|' | '?' | '<' | '=' | '~' ) )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1061:4: ( '+' | '-' | '/' | '\\\\' | '*' | '%' | '&' | '|' | '?' | '<' | '=' | '~' )
       {
         if (((this.input.LA(1) >= '%') && (this.input.LA(1) <= '&'))
             || ((this.input.LA(1) >= '*') && (this.input.LA(1) <= '+'))
@@ -9096,8 +9096,8 @@ public class AntlrPilarLexer extends Lexer {
   // $ANTLR start "TX_OPID_CHARMLT"
   public final void mTX_OPID_CHARMLT() throws RecognitionException {
     try {
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1065:2: ( ( '+' | '-' | '/' | '\\\\' | '*' | '%' | '&' | '|' | '?' | '>' | '=' | '~' ) )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1065:4: ( '+' | '-' | '/' | '\\\\' | '*' | '%' | '&' | '|' | '?' | '>' | '=' | '~' )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1066:2: ( ( '+' | '-' | '/' | '\\\\' | '*' | '%' | '&' | '|' | '?' | '>' | '=' | '~' ) )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1066:4: ( '+' | '-' | '/' | '\\\\' | '*' | '%' | '&' | '|' | '?' | '>' | '=' | '~' )
       {
         if (((this.input.LA(1) >= '%') && (this.input.LA(1) <= '&'))
             || ((this.input.LA(1) >= '*') && (this.input.LA(1) <= '+'))
@@ -9124,10 +9124,10 @@ public class AntlrPilarLexer extends Lexer {
   // $ANTLR start "TX_OPID_SUFFIX"
   public final void mTX_OPID_SUFFIX() throws RecognitionException {
     try {
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1050:2: ( ( TX_OPID_CHAR )* ( '_' TX_BASICID )? )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1050:4: ( TX_OPID_CHAR )* ( '_' TX_BASICID )?
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1051:2: ( ( TX_OPID_CHAR )* ( '_' TX_BASICID )? )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1051:4: ( TX_OPID_CHAR )* ( '_' TX_BASICID )?
       {
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1050:4: ( TX_OPID_CHAR )*
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1051:4: ( TX_OPID_CHAR )*
         loop51: do {
           int alt51 = 2;
           final int LA51_0 = this.input.LA(1);
@@ -9141,7 +9141,7 @@ public class AntlrPilarLexer extends Lexer {
 
           switch (alt51) {
             case 1:
-            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1050:4: TX_OPID_CHAR
+            // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1051:4: TX_OPID_CHAR
             {
               mTX_OPID_CHAR();
 
@@ -9153,7 +9153,7 @@ public class AntlrPilarLexer extends Lexer {
           }
         } while (true);
 
-        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1050:18: ( '_' TX_BASICID )?
+        // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1051:18: ( '_' TX_BASICID )?
         int alt52 = 2;
         final int LA52_0 = this.input.LA(1);
 
@@ -9162,7 +9162,7 @@ public class AntlrPilarLexer extends Lexer {
         }
         switch (alt52) {
           case 1:
-          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1050:20: '_' TX_BASICID
+          // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1051:20: '_' TX_BASICID
           {
             match('_');
             mTX_BASICID();
@@ -9182,8 +9182,8 @@ public class AntlrPilarLexer extends Lexer {
   // $ANTLR start "TX_UnicodeEscape"
   public final void mTX_UnicodeEscape() throws RecognitionException {
     try {
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1110:2: ( '\\\\' 'u' TX_HexDigit TX_HexDigit TX_HexDigit TX_HexDigit )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1110:4: '\\\\' 'u' TX_HexDigit TX_HexDigit TX_HexDigit TX_HexDigit
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1111:2: ( '\\\\' 'u' TX_HexDigit TX_HexDigit TX_HexDigit TX_HexDigit )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1111:4: '\\\\' 'u' TX_HexDigit TX_HexDigit TX_HexDigit TX_HexDigit
       {
         match('\\');
         match('u');
@@ -9204,8 +9204,8 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.TYPEVARID;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:952:2: ( '\\'' ID )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:952:4: '\\'' ID
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:953:2: ( '\\'' ID )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:953:4: '\\'' ID
       {
         match('\'');
         mID();
@@ -9224,8 +9224,8 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.UN_OP;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1041:2: ( ( '!' | '~' ) TX_OPID_SUFFIX )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1041:4: ( '!' | '~' ) TX_OPID_SUFFIX
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1042:2: ( ( '!' | '~' ) TX_OPID_SUFFIX )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1042:4: ( '!' | '~' ) TX_OPID_SUFFIX
       {
         if ((this.input.LA(1) == '!') || (this.input.LA(1) == '~')) {
           this.input.consume();
@@ -9254,8 +9254,8 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.WS;
       int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1152:4: ( ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1152:6: ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1153:4: ( ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1153:6: ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' )
       {
         if (((this.input.LA(1) >= '\t') && (this.input.LA(1) <= '\n'))
             || ((this.input.LA(1) >= '\f') && (this.input.LA(1) <= '\r'))
@@ -9286,8 +9286,8 @@ public class AntlrPilarLexer extends Lexer {
     try {
       final int _type = AntlrPilarLexer.XOR_OP;
       final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1008:8: ( '^~' TX_OPID_SUFFIX )
-      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1008:10: '^~' TX_OPID_SUFFIX
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1009:8: ( '^~' TX_OPID_SUFFIX )
+      // /Users/robby/Repositories/sireum-parser/sireum-parser/src/main/java/org/sireum/pilar/parser/AntlrPilar.g:1009:10: '^~' TX_OPID_SUFFIX
       {
         match("^~");
 
