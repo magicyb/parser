@@ -1,12 +1,8 @@
-  grammar Antlr4Pilar;
+grammar Antlr4Pilar;
 
 modelFile : model EOF;
 
 annotationFile : annotation EOF;
-
-packageDeclarationFile : packageDeclaration EOF;
-
-packageElementFile : packageElement EOF;
 
 locationFile : location EOF;
 
@@ -20,42 +16,28 @@ expFile : exp EOF;
 
 typeFile : type EOF;
 
+
 model
-  : annotation*
-    packageElement*
-    packageDeclaration*
+  : annotation* modelElement*
   ;
 
 annotation
-  : '@' Identifier annotationParams?
+  : '@' ID annotationParams?
   ;
 
 annotationParams
-  : '(' annotationParam ( ',' annotationParam )* ')'        #AnnotationParamsA
-  | exp ( ',' exp )*                                        #AnnotationParamsE
+  : '(' annotationParam ( ',' annotationParam )* ')' #AnnotationParamsA
+  | exp+                                             #AnnotationParamsE
   ;
 
 annotationParam
-  : Identifier '=' annotation                               #AnnotationParamIA
-  | Identifier '=' exp                                      #AnnotationParamIE
-  | annotation                                              #AnnotationParamA
-  | exp                                                     #AnnotationParamE
+  : ID '=' annotation #AnnotationParamIA
+  | ID '=' exp        #AnnotationParamIE
+  | annotation        #AnnotationParamA
+  | exp               #AnnotationParamE
   ;
 
-angleGroupedAnnotations
-  : '<' annotation* '>'
-  ;
-
-parenGroupedAnnotations
-  : '(' annotation* ')'
-  ;
-
-packageDeclaration
-  : 'package' name annotation* ';'
-    packageElement*
-  ; 
-
-packageElement
+modelElement
   : constDeclaration
   | enumDeclaration
   | recordDeclaration
@@ -66,35 +48,35 @@ packageElement
   ;
 
 constDeclaration
-  : 'const' Identifier annotation* '{' constElement* '}'
+  : 'const' ID annotation* '{' constElement* '}'
   ;
 
 constElement
-  : Identifier '=' exp annotation* ';'
+  : ID '=' constant annotation* ';'
   ;
 
 enumDeclaration
-  : 'enum' Identifier annotation* '{' ( enumElement ( ',' enumElement )* )? '}'
+  : 'enum' ID annotation* '{' ( enumElement ( ',' enumElement )* )? '}'
   ;
 
 enumElement
-  : Identifier annotation*
+  : ID annotation*
   ;
 
 typealiasDeclaration
-  : 'typealias' type Identifier annotation* ';'
-  ;
-
-recordDeclaration
-  : 'record' Identifier typeVarTuple? annotation* extendClauses? '{' field* '}'
+  : 'typealias' ID typeVarTuple? annotation*  '='  type ';'
   ;
 
 typeVarTuple
-  : '<' typeVar ( ',' typeVar )* '>'
+  : '[' typeVar ( ',' typeVar )* ']'
   ;
 
 typeVar
-  : TypeVariableIdentifier annotation*
+  : ID annotation*
+  ;
+
+recordDeclaration
+  : 'record' ID typeVarTuple? annotation* extendClauses? '{' field* '}'
   ;
 
 extendClauses
@@ -102,7 +84,7 @@ extendClauses
   ;
 
 extendClause
-  : name typeTuple? annotation*
+  : ID typeTuple? annotation*
   ;
 
 typeTuple
@@ -110,11 +92,12 @@ typeTuple
   ;
 
 field
-  : type? fieldFragment ( ',' fieldFragment )* ';'
+  : fieldFragment ( ',' fieldFragment )* ':' type ';'
+  | type? fieldFragment ( ',' fieldFragment )* ';'
   ;
 
 fieldFragment
-  : Identifier annotation*
+  : ID annotation*
   ;
 
 globalVarsDeclaration
@@ -122,51 +105,63 @@ globalVarsDeclaration
   ;
 
 globalVarDeclaration
-  : type? globalVarFragment ( ',' globalVarFragment )*
+  : globalVarFragment ( ',' globalVarFragment )* ':' type ';'
+  | type? globalVarFragment ( ',' globalVarFragment )* ';'
   ;
 
 globalVarFragment
-  : GlobalVariableIdentifier annotation*
+  : GID annotation*
   ;
 
 procedureDeclaration
-  : 'procedure' typeVarTuple? type? Identifier
-    ( '(' paramVar ( ',' paramVar )* ')' )?
-    annotation*
-    body
+  : 'procedure' typeVarTuple?
+    ( ID ( '(' ( paramVar ( ',' paramVar )* )? ')' )? ':' type
+      annotation* body
+    | type?  ID ( '(' ( paramVar ( ',' paramVar )* )? ')' )?
+      annotation* body
+    )
   ;
 
 paramVar
-  : type? Identifier annotation*
+  : ID annotation* ':' type
+  | type? ID annotation*
   ;
 
 funDeclaration
-  : 'fun' typeVarTuple? type? Identifier
-    ( '(' paramVar ( ',' paramVar )* ')' )?
-    annotation* '=' exp ';'
+  : 'fun' typeVarTuple?
+    ( ID ( '(' ( paramVar ( ',' paramVar )* )? ')' )?
+      annotation* ':' type '=' exp ';'
+    | type? ID ( '(' ( paramVar ( ',' paramVar )* )? ')' )?
+      annotation* '=' exp ';'
+    )
   ;
 
 extDeclaration
-  : 'extension' typeVarTuple? Identifier annotation* '{' extElement* '}'
+  : 'extension' typeVarTuple? ID annotation* '{' extElement* '}'
   ;
 
 extElement
-  : 'typedef'   typeVarTuple?       Identifier annotation*  extendClauses? ';'            #TypeExtension
-  | 'actiondef' typeVarTuple?       Identifier ( '(' extParams ')' )? annotation* ';'     #ActionExtension
-  | 'expdef'    typeVarTuple? type? Identifier ( '(' extParams ')' )? annotation* ';'     #ExpExtension
-  | 'procdef'   typeVarTuple? type? Identifier ( '(' extParams ')' )? annotation* ';'     #ProcedureExtension
+  : 'typedef'   typeVarTuple? ID annotation* extendClauses? ';'                   #TypeExtension
+  | 'actiondef' typeVarTuple? ID ( '(' extParams? ')' )? annotation* ';'          #ActionExtension
+  | 'expdef'    typeVarTuple? ID ( '(' extParams? ')' )? annotation* ':' type ';' #ExpExtension
+  | 'expdef'    typeVarTuple? type? ID ( '(' extParams? ')' )? annotation* ';'    #ExpExtension
+  | 'procdef'   typeVarTuple? ID ( '(' extParams? ')' )? annotation* ':' type ';' #ProcedureExtension
+  | 'procdef'   typeVarTuple? type? ID ( '(' extParams? ')' )? annotation* ';'    #ProcedureExtension
   ;
 
 extParams
-  : ( extParam ( ',' extParam )* )? extParamVariable?
+  : extParam ( ',' extParam )* ( ',' extParamVariable )?
+  | extParamVariable
   ;
 
 extParam
-  : type? Identifier? annotation*
+  : ID annotation* ':' type
+  | type ID? annotation*
   ;
 
 extParamVariable
-  : type? Identifier? '...' annotation*
+  : ID '...' annotation* ':' type
+  | type '...' ID? annotation*
   ;
 
 body
@@ -174,43 +169,52 @@ body
     localVarsDeclaration?
     location*
     catchClause*
-    '}'                                                     #ImplementedBody
-  | ';'                                                     #EmptyBody
+    '}'                   #ImplementedBody
+  | ';'                   #EmptyBody
   ;
 
 localVarsDeclaration
-  : 'local' localVarDeclaration+
+  : localVarDeclaration+
   ;
 
 localVarDeclaration
-  : type? localVarFragment ( ',' localVarFragment )* ';'
+  : localVarFragment ( ',' localVarFragment )* ':' type ';'
+  | type? localVarFragment ( ',' localVarFragment )* ';'
   ;
 
 localVarFragment
-  : Identifier annotation*
+  : ID annotation*
   ;
 
 location
-  : LocationIdentifier angleGroupedAnnotations?
+  : LID annotation*
     ( transformation ( '|' transformation )* )?
   ;
 
 transformation
-  : parenGroupedAnnotations? guard action* jump?
+  : guard? 'call'
+      ( clhs+=ID ( ',' clhs+=ID )* AssignOP )? p=ID
+      tupleExp
+      ( cans+=annotation )*
+      gotoj? ( tanns+=annotation )*                 #CallTransformation
+  | guard? action* jump?
+      ( tanns+=annotation )*                        #BlockTransformation
   ;
 
 guard
-  : exp annotation* '+>'                                    # ExpGuard
-  | 'else' annotation*                                      # ElseGuard
+  : exp annotation* '+>' # ExpGuard
+  | 'else' annotation*   # ElseGuard
   ;
 
 action
-  : 'assert' exp annotation* ';'                                       #Assert
-  | 'assume' exp annotation* ';'                                       #Assume
-  | 'throw'  exp annotation* ';'                                       #Throw
-  | lhss ( ':=' | ActionExtOperator ) rhs ( ',' rhs )* annotation* ';' #Assign
-  | 'start' name ( '[' exp ']' )? exp? annotation* ';'                 #Start
-  | exp annotation* ';'                                                #ActionExtCall
+  : 'assert' exp ( ',' exp )? annotation* ';'       #Assert
+  | 'assume' exp ( ',' exp )? annotation* ';'       #Assume
+  | 'throw'  exp annotation* ';'                    #Throw
+  | 'start' typeTuple? ID ( '[' n=exp ']' )?
+      tupleExp annotation* ';'                      #Start
+  | ID typeTuple? tupleExp
+    annotation* ';'                                 #ActionExtCall
+  | lhss AssignOP rhs ( ',' rhs )* annotation* ';'  #Assign
   ;
 
 lhss
@@ -226,110 +230,94 @@ rhs
   ;
 
 jump
-  : gotoj                                                            #GotoJump
-  | 'return'  exp? annotation* ';'                                   #ReturnJump
-  | ifThenJump ( 'else' ifThenJump )* ifElseJump? annotation* ';'    #IfJump
-  | 'switch' exp switchCaseJump* switchDefaultJump? annotation* ';'  #SwitchJump
-  | 'call' ( lhs ':=' )? exp annotation* ';' gotoj?                  #CallJump
+  : gotoj                                                           #GotoJump
+  | 'return' ( exp ( ',' exp )* )? annotation* ';'                  #ReturnJump
+  | ifThenJump ( 'else' ifThenJump )* ifElseJump? annotation* ';'   #IfJump
+  | 'switch' exp switchCaseJump* switchDefaultJump? annotation* ';' #SwitchJump
   ;
 
 gotoj
-  : 'goto' Identifier annotation* ';'
+  : 'goto' ID annotation* ';'
   ;
 
 ifThenJump
-  : 'if' exp 'then' annotation* 'goto' Identifier
+  : 'if' exp 'then' annotation* 'goto' ID
   ;
 
 ifElseJump
-  : 'else' annotation* 'goto' Identifier
+  : 'else' annotation* 'goto' ID
   ;
 
 switchCaseJump
-  : '|' exp '=>' annotation* 'goto' Identifier
+  : '|' constant '=>' annotation* 'goto' ID
   ;
 
 switchDefaultJump
-  : '|' '=>' annotation* 'goto' Identifier
+  : '|' 'else' '=>' annotation* 'goto' ID
   ;
 
 catchClause
-  : 'catch' annotation* type?
-    var=Identifier? '@' '[' from=Identifier '..' to=Identifier ']' gotoj
+  : 'catch' annotation*
+    ( var=ID? ':' type | type? var=ID? )
+    '@' '[' from=ID '..' to=ID ']' gotoj
   ;
 
 exp
-  : primary primarySuffix*                                  #PrimaryExp
-  | '(' type ')' exp                                        #CastExp
-  | op=( UnaryOperator | AdditiveOperator
-       | MultiplicativeOperator | '*' )
-    exp                                                     #UnaryExp
-  | exp op=( MultiplicativeOperator | '*' ) exp             #BinaryExp
-  | exp op=AdditiveOperator exp                             #BinaryExp
-  | exp op=ShiftOperator exp                                #BinaryExp
-  | exp op=( RelationalOperator | '<' | '>' ) exp           #BinaryExp
-  | exp op=ColonOperator exp                                #BinaryExp
-  | exp op=EqualityOperator exp                             #BinaryExp
-  | exp op=AndOperator exp                                  #BinaryExp
-  | exp op=XorOperator exp                                  #BinaryExp
-  | exp op=OrOperator exp                                   #BinaryExp
-  | exp op=ConditionalAndOperator exp                       #BinaryExp
-  | exp op=ConditionalOrOperator exp                        #BinaryExp
-  | exp op=( '==>' | '<==' ) exp                            #BinaryExp
-  | ifThenExp ( 'else' ifThenExp )* ifElseExp?              #IfExp
-  | 'switch' exp switchCaseExp* switchDefaultExp?           #SwitchExp
+  : primary primarySuffix*                    #PrimaryExp
+  | '(' type ')' exp                          #CastExp
+  | op=( UnaryOP | AddOP | MulOP | ID ) exp   #UnaryExp
+  | exp op=ID exp                             #BinaryExp
+  | exp op=MulOP exp                          #BinaryExp
+  | exp op=AddOP exp                          #BinaryExp
+  | exp op=ShiftOP exp                        #BinaryExp
+  | exp op=( RelOP | '<' | '>' ) exp          #BinaryExp
+  | exp op=EqOP exp                           #BinaryExp
+  | exp op=AndOP exp                          #BinaryExp
+  | exp op=XorOP exp                          #BinaryExp
+  | exp op=OrOP exp                           #BinaryExp
+  | exp op=CondAndOP exp                      #BinaryExp
+  | exp op=CondOrOP exp                       #BinaryExp
+  | exp op=( '==>' | '<==' ) exp              #BinaryExp
+  | ifThenExp ( 'else' ifThenExp )* ifElseExp #IfExp
   ;
 
 ifThenExp
-  : 'if' cond=exp 'then' annotation* exp
+  : 'if' exp 'then' annotation* exp
   ;
 
 ifElseExp
   : 'else' annotation* exp
   ;
 
-switchCaseExp
-  : '|' cond=exp '=>' annotation* exp
-  ;
-
-switchDefaultExp
-  : '|' '=>' annotation* exp
-  ;
 
 primarySuffix
-  : '[' exp ( ',' exp )* ']'                                #IndexingSuffix
-  | '.' Identifier                                          #AccessSuffix
+  : '[' exp ( ',' exp )* ']' #IndexingSuffix
+  | '.' ID                   #AccessSuffix
+  | typeTuple? tupleExp      #CallSuffix
   ;
 
 primary
-  : 'true'                                                  #TrueLit
-  | 'false'                                                 #FalseLit
-  | 'null'                                                  #NullLit
-  | CharacterLiteral                                        #CharLit
-  | HexLiteral                                              #HexLit
-  | OctalLiteral                                            #OctLit
-  | DecimalLiteral                                          #DecLit
-  | BinaryLiteral                                           #BinLit
-  | FloatingPointLiteral                                    #FloatLit
-  | SymbolLiteral                                           #SymbolLit
-  | StringLiteral                                           #StringLit
-  | MultilineStringLiteral                                  #MultilineStringLit
-  | '`' type                                                #TypeLit
-  | '(' ( annExp ( ',' annExp )* )? ')'                     #TupleExp
-  | name                                                    #NameExp
-  | globalName                                              #GlobalNameExp
-  | newK '[' exp '..' exp ']'                               #RangedListExp
-  | newK '[' ( exp ( ',' exp )* )? ']'                      #ListExp
-  | newK '{' ( exp ( ',' exp )* )? '}'                      #SetExp
-  | newK '{' ( '->' | mapping ( ',' mapping )* ) '}'        #MapExp
+  : ID                                                   #NameExp
+  | GID                                                  #GlobalNameExp
+  | constant                                             #ConstantLit
+  | tupleExp                                             #PTupleExp
+  | 'let' binding ( ',' binding )* 'in' exp              #LetExp
+  | newK '[' exp '..' exp ']'                            #RangedListExp
+  | newK '[' ( exp ( ',' exp )* )? ']'                   #ListExp
+  | newK '{' ( exp ( ',' exp )* )? '}'                   #SetExp
+  | newK '{' ( '->' | mapping ( ',' mapping )* ) '}'     #MapExp
   | newK '['
-    ( newMultiArrayFragment
-      ( ',' newMultiArrayFragment )* )? ']'                 #MultiArrayExp
-  | newK '{' matching ( '|' matching )* '}'                 #ClosureExp
-  | newK name typeTuple?
-    '{' ( fieldInit ( ',' fieldInit )* )? '}'               #RecordExp
-  | newK baseType newMultiArrayTypeFragment* typeFragment*  #ArrayExp
-  | 'let' binding ( ',' binding )* 'in' exp                 #LetExp
+    ( newMultiSeqFragment
+      ( ',' newMultiSeqFragment )* )? ']'                #MultiSeqExp
+  | newK '{' matching ( '|' matching )* '}'              #ClosureExp
+  | newK ID typeTuple?
+    '{' ( fieldInit ( ',' fieldInit )* )? '}'            #RecordExp
+  | newK baseType newMultiSeqTypeFragment* typeFragment* #ArrayExp
+  | '^' type                                             #TypeExp
+  ;
+
+tupleExp
+  : '(' ( annExp ( ',' annExp )* )? ')'
   ;
 
 annExp
@@ -337,41 +325,37 @@ annExp
   ;
 
 newK
-  : '`' | 'new'
+  : '^' | 'new'
   ;
 
-newMultiArrayFragment
-  : '[' (     ( newMultiArrayFragment | exp )
-        ( ',' ( newMultiArrayFragment | exp ) )* )? ']'
-  ;
-
-
-newMultiArrayTypeFragment
-  : '[' exp ( ',' exp )* ']'
-  ;
-
-fieldInit
-  : Identifier '=' exp
+binding
+  : ID ( ',' ID )? '=' exp
   ;
 
 mapping
   : exp '->' exp
   ;
 
+newMultiSeqFragment
+  : '[' ( newMultiSeqFragmentE
+        ( ',' newMultiSeqFragmentE )* )? ']'
+  ;
+
+newMultiSeqFragmentE
+  : newMultiSeqFragment #NewMultiSeqFragmentENew
+  | exp                 #NewMultiSeqFragmentEExp
+  ;
+
 matching
   : ( paramVar ( ',' paramVar )* )? '=>' exp
   ;
 
-binding
-  : Identifier ( ',' Identifier )? '=' exp
+fieldInit
+  : ID '=' exp
   ;
 
-name
-  : ( Identifier '::' )* Identifier
-  ;
-
-globalName
-  : ( Identifier '::' )* GlobalVariableIdentifier
+newMultiSeqTypeFragment
+  : '[' exp ( ',' exp )* ']'
   ;
 
 type
@@ -379,185 +363,149 @@ type
   ;
 
 typeFragment
-  : '*'                                                     #StarTypeFragment
-  | '[' ']'                                                 #ListFragment
-  | '[' ','+ ']'                                            #MultiArrayFragment
-  | '{' '}'                                                 #SetFragment
+  : '[' ']'                            #SeqFragment
+  | '[' constant ']'                   #StaticSeqFragment
+  | '[' ( rank+=',' )+ ']'             #MultiSeqFragment
+  | '[' constant ( ',' constant )+ ']' #StaticMultiSeqFragment
+  | '{' '}'                            #SetFragment
+  ;
+
+constant
+  : 'true'  #TrueConstant
+  | 'false' #FalseConstant
+  | 'null'  #NullConstant
+  | ID      #IdConstant
+  | CHAR    #CharConstant
+  | HEX     #HexConstant
+  | OCT     #OctConstant
+  | DEC     #DecConstant
+  | BIN     #BinConstant
+  | FLOAT   #FloatConstant
+  | STRING  #StringConstant
+  | MSTRING #MultilineStringConstant
   ;
 
 baseType
-  : TypeVariableIdentifier                                  #TypeVariable
-  | name ( '.' Identifier )? typeTuple?                     #NamedType
-  | '(' procTypeParam? '->' annotatedType? ')'              #ClosureType
-	| '(' procTypeParam? '-!>' annotatedType? ')'             #ProcedureType
-  | '(' typeParam ( ',' typeParam)* ')'                     #TupleType
-  | '{' typeParam ( ',' typeParam )* '->' annotatedType '}' #MapType
-  | '{' typeParam ( ',' typeParam )+ '}'                    #RelationType
-  ;
-
-procTypeParam
-  : procedureTypeParamVariable
-	| typeParam ( ',' typeParam )* ( ',' procedureTypeParamVariable )?
+  : ID typeTuple?                                             #NamedType
+  | '(' typeParam ( ',' typeParam )* '->' annotatedType? ')'  #ClosureType
+	| '(' typeParam ( ',' typeParam )* '-!>' annotatedType? ')' #ProcedureType
+  | '(' typeParam ( ',' typeParam)* ')'                       #TupleType
+  | '{' typeParam ( ',' typeParam )* '->' annotatedType '}'   #MapType
+  | '{' typeParam ( ',' typeParam )+ '}'                      #RelationType
   ;
 
 typeParam
-	: type Identifier? annotation*
+	: ID annotation* ':' type
+  | type ID? annotation*
 	;
 
 annotatedType
 	: type annotation*
 	;
 
-procedureTypeParamVariable
-	: type Identifier? '...' annotation*
+ID
+	: IDFragment '\''*
+	| '`' ( ~( '\n' | '\r' | '\t' | '\u000C' | '`' ) )* '`'
 	;
 
-Identifier
-	: '^'? IdentifierFragment '\''*
-	| '{|' ( ~( '|' | '\n' | '\r' | '\t' )
-	       | ( '|' ~( '}' |'\r'|'\t'|'\u000C'|'\n') ) )*
-	   '|}'
-	| '(|' ( ~( '|' | '\n' | '\r' | '\t' )
-	       | ( '|' ~( ')' |'\r'|'\t'|'\u000C'|'\n') ) )*
-	   '|)'
-	| '[|' ( ~( '|' | '\n' | '\r' | '\t' )
-	       | ( '|' ~( ']' |'\r'|'\t'|'\u000C'|'\n') ) )*
-	   '|]'
-	| '<|' ( ~( '|' | '\n' | '\r' | '\t' )
-	       | ( '|' ~( '>' |'\r'|'\t'|'\u000C'|'\n') ) )*
-	   '|>'
-	| '+|' ( ~( '|' | '\n' | '\r' | '\t' )
-	       | ( '|' ~( '+' |'\r'|'\t'|'\u000C'|'\n') ) )*
-	   '|+'
-	| '-|' ( ~( '|' | '\n' | '\r' | '\t' )
-	       | ( '|' ~( '-' |'\r'|'\t'|'\u000C'|'\n') ) )*
-	   '|-'
-	| '*|' ( ~( '|' | '\n' | '\r' | '\t' )
-	       | ( '|' ~( '*' |'\r'|'\t'|'\u000C'|'\n') ) )*
-	   '|*'
-	| '.|' ( ~( '|' | '\n' | '\r' | '\t' )
-	       | ( '|' ~( '}' |'\r'|'\t'|'\u000C'|'\n') ) )*
-	   '|.'
+GID
+	: '@@' IDFragment
 	;
 
-GlobalVariableIdentifier
-	: '@@' Identifier
-	;
+LID
+  : '#' ( ID '.'? )?
+  ;
 
-TypeVariableIdentifier
-	: '\'' Identifier
-	;
-
-LocationIdentifier	: '#' ( Identifier '.'? )? ;
-
-SymbolLiteral
-	: ':' Identifier
-	;
-
-// Lexer adapted from ANTLR Java 1.5 grammar v1.0 by T. Parr
-MultilineStringLiteral
+MSTRING
   : '"""' .*? '"""'
   ;
 
-ConditionalAndOperator
-	: '&' OperatorSuffix
+CondAndOP
+	: '&' OPSuffix
 	;
 
-ConditionalOrOperator
-	: '||' OperatorSuffix
+CondOrOP
+	: '||' OPSuffix
 	;
 
-AndOperator	: '^&' OperatorSuffix
+AndOP	: '^&' OPSuffix
 	;
 
-XorOperator	: '^~' OperatorSuffix
+XorOP	: '^~' OPSuffix
 	;
 
-OrOperator	: '^|' OperatorSuffix
+OrOP	: '^|' OPSuffix
 	;
 
-EqualityOperator	: ( '==' | '!=' ) OperatorSuffix
+EqOP: ( '==' | '!=' ) OPSuffix
 	;
 
-ColonOperator
-	: OperatorChar OperatorSuffix ':'
+RelOP
+	: '<' OPCharMLT OPSuffix
+	| '>' OPCharMGT OPSuffix
 	;
 
-RelationalOperator
-	: '<' OperatorCharMLT OperatorSuffix
-	| '>' OperatorCharMGT OperatorSuffix
+ShiftOP
+	: '^<' | '^>>' OPSuffix
+	| '^>' ( OPCharMGT OPSuffix )?
 	;
 
-ShiftOperator
-	: '^<' | '^>>' OperatorSuffix
-	| '^>' ( OperatorCharMGT OperatorSuffix )?
+AddOP
+	: ( '+' | '-' ) OPSuffix
 	;
 
-AdditiveOperator
-	: ( '+' | '-' ) OperatorSuffix
+MulOP
+	: ( '/' | '%' | '*' ) OPSuffix
 	;
 
-MultiplicativeOperator
-	: ( '/' | '%' ) OperatorSuffix
-	| '*' OperatorChar OperatorSuffix
+UnaryOP
+	: ( '!' | '~' ) OPSuffix
 	;
 
-UnaryOperator
-	: ( '!' | '~' ) OperatorSuffix
-	;
-
-ActionExtOperator
-  :	':' OperatorChar+ '='
+AssignOP
+  :	':' OPChar+ '='
   ;
 
 fragment
-OperatorSuffix
-	: OperatorChar* ( '_' IdentifierFragment )?
+OPSuffix
+	: OPChar* ( '_' IDFragment )?
 	;
 
 fragment
-OperatorChar
+OPChar
 	: ( '+' | '-' | '/' | '\\' | '*' | '%' | '&' | '|' | '?' | '>' | '<' | '=' | '~' )
 	;
 
 fragment
-OperatorCharMGT
+OPCharMGT
 	: ( '+' | '-' | '/' | '\\' | '*' | '%' | '&' | '|' | '?' | '<' | '=' | '~' )
 	;
 
 fragment
-OperatorCharMLT
+OPCharMLT
 	: ( '+' | '-' | '/' | '\\' | '*' | '%' | '&' | '|' | '?' | '>' | '=' | '~' )
 	;
 
 fragment
-IdentifierFragment
-	: Letter ( Letter | JavaIDDigit )*
+IDFragment
+	: LETTER ( LETTER | DIGIT )*
 	;
 
-HexLiteral
-  // underscores may be freely inserted after first hex digit and before last
+HEX
   : '0' ('x'|'X')
     HexDigits
     IntegerTypeSuffix?
   ;
 
-DecimalLiteral
-  // Only a single zero digit may begin with a zero
-  // Underscores may be freely inserted after first digit and before last
+DEC
   : ( '0' | '1'..'9' ('_'* Digit)* ) IntegerTypeSuffix?
   ;
 
-OctalLiteral
-  // Underscores may be freely inserted before the last digit.
-  // Don't know why underscores here are different from others -
-  // Maybe the leading 0 is considered a digit as well as a marker
-  // indicating that the following is a base 8 number
+OCT
   : '0' ('_'* '0'..'7')+ IntegerTypeSuffix?
   ;
 
-BinaryLiteral
-  // underscores may be freely inserted after first digit and before last
+BIN
   : '0' ('b'|'B')
     BinaryDigit ('_'* BinaryDigit)*
     IntegerTypeSuffix?
@@ -579,9 +527,9 @@ fragment
 Digit : '0'..'9' ;
 
 fragment
-IntegerTypeSuffix : ('l'|'L'|'ii'|'II'|'i'|'I') ;
+IntegerTypeSuffix : 'l' | 'L' | 'i'| 'I';
 
-FloatingPointLiteral
+FLOAT
   : Digits '.' Digits? Exponent? FloatTypeSuffix?
   | '.' Digits Exponent? FloatTypeSuffix?
   | Digits Exponent FloatTypeSuffix?
@@ -600,11 +548,11 @@ Exponent : ('e'|'E') ('+'|'-')? Digits ;
 fragment
 FloatTypeSuffix : ('f'|'F'|'d'|'D') ;
 
-CharacterLiteral
+CHAR
   : '\'' ( EscapeSequence | ~('\''|'\\') ) '\''
   ;
 
-StringLiteral
+STRING
   :  '"' ( EscapeSequence | ~('\\'|'"') )* '"'
   ;
 
@@ -627,19 +575,17 @@ UnicodeEscape
   : '\\' 'u' HexDigit HexDigit HexDigit HexDigit
   ;
 
-/**I found this char range in JavaCC's grammar, but Letter and Digit overlap.
-   Still works, but...
- */
+// From JavaCC's grammar
 fragment
-Letter
+LETTER
   : '\u0024'                 // $
   | '\u0041'..'\u005a'       // A-Z
   | '\u005f'                 // _
   | '\u0061'..'\u007a'       // a-z
-  | '\u00c0'..'\u00d6'       // Latin Capital Letter A with grave - Latin Capital letter O with diaeresis
-  | '\u00d8'..'\u00f6'       // Latin Capital letter O with stroke - Latin Small Letter O with diaeresis
-  | '\u00f8'..'\u00ff'       // Latin Small Letter O with stroke - Latin Small Letter Y with diaeresis
-  | '\u0100'..'\u1fff'       // Latin Capital Letter A with macron - Latin Small Letter O with stroke and acute
+  | '\u00c0'..'\u00d6'       // Latin Capital LETTER A with grave - Latin Capital letter O with diaeresis
+  | '\u00d8'..'\u00f6'       // Latin Capital letter O with stroke - Latin Small LETTER O with diaeresis
+  | '\u00f8'..'\u00ff'       // Latin Small LETTER O with stroke - Latin Small LETTER Y with diaeresis
+  | '\u0100'..'\u1fff'       // Latin Capital LETTER A with macron - Latin Small LETTER O with stroke and acute
   | '\u3040'..'\u318f'       // Hiragana
   | '\u3300'..'\u337f'       // CJK compatibility
   | '\u3400'..'\u3d2d'       // CJK compatibility
@@ -648,7 +594,7 @@ Letter
   ;
 
 fragment
-JavaIDDigit
+DIGIT
   : '\u0030'..'\u0039'       // 0-9
   | '\u0660'..'\u0669'       // Arabic-Indic Digit 0-9
   | '\u06f0'..'\u06f9'       // Extended Arabic-Indic Digit 0-9
@@ -671,9 +617,9 @@ WS
   ;
 
 COMMENT
-  : '/*' .*? '*/'    -> channel(HIDDEN)
+  : '/*' .*? '*/'    -> channel(2)
   ;
 
 LINE_COMMENT
-  : '//' ~[\r\n]*    -> channel(HIDDEN)
+  : '//' ~[\r\n]*    -> channel(2)
   ;
