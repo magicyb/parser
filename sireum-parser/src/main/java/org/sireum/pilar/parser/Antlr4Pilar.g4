@@ -4,6 +4,8 @@ modelFile : model EOF;
 
 annotationFile : annotation EOF;
 
+bodyFile : implementedBody EOF;
+
 locationFile : location EOF;
 
 transformationFile : transformation EOF;
@@ -45,6 +47,7 @@ modelElement
   | procedureDeclaration
   | funDeclaration
   | extDeclaration
+  | typealiasDeclaration
   ;
 
 constDeclaration
@@ -68,7 +71,7 @@ typealiasDeclaration
   ;
 
 typeVarTuple
-  : '[' typeVar ( ',' typeVar )* ']'
+  : '<' typeVar ( ',' typeVar )* '>'
   ;
 
 typeVar
@@ -165,12 +168,20 @@ extParamVariable
   ;
 
 body
+  : implementedBody
+  | emptyBody
+  ;
+
+implementedBody
   : '{'
     localVarsDeclaration?
     location*
     catchClause*
-    '}'                   #ImplementedBody
-  | ';'                   #EmptyBody
+    '}'
+  ;
+
+emptyBody
+  : ';'
   ;
 
 localVarsDeclaration
@@ -196,7 +207,7 @@ transformation
       ( clhs+=ID ( ',' clhs+=ID )* AssignOP )? p=ID
       tupleExp
       ( cans+=annotation )*
-      gotoj? ( tanns+=annotation )*                 #CallTransformation
+      ( gotoj | ';' ) ( tanns+=annotation )*        #CallTransformation
   | guard? action* jump?
       ( tanns+=annotation )*                        #BlockTransformation
   ;
@@ -309,11 +320,11 @@ primary
   | newK '['
     ( newMultiSeqFragment
       ( ',' newMultiSeqFragment )* )? ']'                #MultiSeqExp
-  | newK '{' matching ( '|' matching )* '}'              #ClosureExp
   | newK ID typeTuple?
     '{' ( fieldInit ( ',' fieldInit )* )? '}'            #RecordExp
   | newK baseType newMultiSeqTypeFragment* typeFragment* #ArrayExp
   | '^' type                                             #TypeExp
+  | '{' matching ( '|' matching )* '}'                   #ClosureExp
   ;
 
 tupleExp
@@ -386,12 +397,12 @@ constant
   ;
 
 baseType
-  : ID typeTuple?                                             #NamedType
-  | '(' typeParam ( ',' typeParam )* '->' annotatedType? ')'  #ClosureType
-	| '(' typeParam ( ',' typeParam )* '-!>' annotatedType? ')' #ProcedureType
-  | '(' typeParam ( ',' typeParam)* ')'                       #TupleType
-  | '{' typeParam ( ',' typeParam )* '->' annotatedType '}'   #MapType
-  | '{' typeParam ( ',' typeParam )+ '}'                      #RelationType
+  : ID typeTuple?                                                  #NamedType
+  | '(' ( typeParam ( ',' typeParam )* )? '->' annotatedType? ')'  #ClosureType
+	| '(' ( typeParam ( ',' typeParam )* )? '-!>' annotatedType? ')' #ProcedureType
+  | '(' typeParam ( ',' typeParam)* ')'                            #TupleType
+  | '{' typeParam ( ',' typeParam )* '->' annotatedType '}'        #MapType
+  | '{' typeParam ( ',' typeParam )+ '}'                           #RelationType
   ;
 
 typeParam
@@ -403,13 +414,14 @@ annotatedType
 	: type annotation*
 	;
 
+GID
+	: '@@' IDFragment
+  | '`@@' ( ~( '\n' | '\r' | '\t' | '\u000C' | '`' ) )* '`'
+	;
+
 ID
 	: IDFragment '\''*
 	| '`' ( ~( '\n' | '\r' | '\t' | '\u000C' | '`' ) )* '`'
-	;
-
-GID
-	: '@@' IDFragment
 	;
 
 LID
@@ -418,6 +430,22 @@ LID
 
 MSTRING
   : '"""' .*? '"""'
+  ;
+
+WS
+  : [ \r\t\u000C\n]+ -> channel(HIDDEN)
+  ;
+
+COMMENT
+  : '/*' .*? '*/'    -> channel(2)
+  ;
+
+LINE_COMMENT
+  : '//' ~[\r\n]*    -> channel(2)
+  ;
+
+AssignOP
+  :	':' OPChar* '='
   ;
 
 CondAndOP
@@ -462,10 +490,6 @@ UnaryOP
 	: ( '!' | '~' ) OPSuffix
 	;
 
-AssignOP
-  :	':' OPChar+ '='
-  ;
-
 fragment
 OPSuffix
 	: OPChar* ( '_' IDFragment )?
@@ -473,17 +497,17 @@ OPSuffix
 
 fragment
 OPChar
-	: ( '+' | '-' | '/' | '\\' | '*' | '%' | '&' | '|' | '?' | '>' | '<' | '=' | '~' )
+	: ( '+' | '-' | '/' | '\\' | '*' | '%' | '&' | '|' | '?' | '>' | '<' | '=' | '~' | ':' )
 	;
 
 fragment
 OPCharMGT
-	: ( '+' | '-' | '/' | '\\' | '*' | '%' | '&' | '|' | '?' | '<' | '=' | '~' )
+	: ( '+' | '-' | '/' | '\\' | '*' | '%' | '&' | '|' | '?' | '<' | '=' | '~' | ':' )
 	;
 
 fragment
 OPCharMLT
-	: ( '+' | '-' | '/' | '\\' | '*' | '%' | '&' | '|' | '?' | '>' | '=' | '~' )
+	: ( '+' | '-' | '/' | '\\' | '*' | '%' | '&' | '|' | '?' | '>' | '=' | '~' | ':' )
 	;
 
 fragment
@@ -612,14 +636,6 @@ DIGIT
   | '\u1040'..'\u1049'       // Myanmar 0-9?
   ;
 
-WS
-  : [ \r\t\u000C\n]+ -> channel(HIDDEN)
-  ;
-
-COMMENT
-  : '/*' .*? '*/'    -> channel(2)
-  ;
-
-LINE_COMMENT
-  : '//' ~[\r\n]*    -> channel(2)
+ErrorChar
+  : .
   ;

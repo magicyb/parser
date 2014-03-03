@@ -196,6 +196,22 @@ public interface Antlr4PilarListener
       @NotNull Antlr4PilarParser.BlockTransformationContext ctx);
 
   /**
+   * Enter a parse tree produced by {@link Antlr4PilarParser#body}.
+   * 
+   * @param ctx
+   *          the parse tree
+   */
+  void enterBody(@NotNull Antlr4PilarParser.BodyContext ctx);
+
+  /**
+   * Enter a parse tree produced by {@link Antlr4PilarParser#bodyFile}.
+   * 
+   * @param ctx
+   *          the parse tree
+   */
+  void enterBodyFile(@NotNull Antlr4PilarParser.BodyFileContext ctx);
+
+  /**
    * Enter a parse tree produced by {@link Antlr4PilarParser#CallSuffix}.
    * 
    * @param ctx
@@ -295,7 +311,7 @@ public interface Antlr4PilarListener
   void enterElseGuard(@NotNull Antlr4PilarParser.ElseGuardContext ctx);
 
   /**
-   * Enter a parse tree produced by {@link Antlr4PilarParser#EmptyBody}.
+   * Enter a parse tree produced by {@link Antlr4PilarParser#emptyBody}.
    * 
    * @param ctx
    *          the parse tree
@@ -558,7 +574,7 @@ public interface Antlr4PilarListener
   void enterIfThenJump(@NotNull Antlr4PilarParser.IfThenJumpContext ctx);
 
   /**
-   * Enter a parse tree produced by {@link Antlr4PilarParser#ImplementedBody}.
+   * Enter a parse tree produced by {@link Antlr4PilarParser#implementedBody}.
    * 
    * @param ctx
    *          the parse tree
@@ -1316,6 +1332,22 @@ public interface Antlr4PilarListener
       @NotNull Antlr4PilarParser.BlockTransformationContext ctx);
 
   /**
+   * Exit a parse tree produced by {@link Antlr4PilarParser#body}.
+   * 
+   * @param ctx
+   *          the parse tree
+   */
+  void exitBody(@NotNull Antlr4PilarParser.BodyContext ctx);
+
+  /**
+   * Exit a parse tree produced by {@link Antlr4PilarParser#bodyFile}.
+   * 
+   * @param ctx
+   *          the parse tree
+   */
+  void exitBodyFile(@NotNull Antlr4PilarParser.BodyFileContext ctx);
+
+  /**
    * Exit a parse tree produced by {@link Antlr4PilarParser#CallSuffix}.
    * 
    * @param ctx
@@ -1414,7 +1446,7 @@ public interface Antlr4PilarListener
   void exitElseGuard(@NotNull Antlr4PilarParser.ElseGuardContext ctx);
 
   /**
-   * Exit a parse tree produced by {@link Antlr4PilarParser#EmptyBody}.
+   * Exit a parse tree produced by {@link Antlr4PilarParser#emptyBody}.
    * 
    * @param ctx
    *          the parse tree
@@ -1676,7 +1708,7 @@ public interface Antlr4PilarListener
   void exitIfThenJump(@NotNull Antlr4PilarParser.IfThenJumpContext ctx);
 
   /**
-   * Exit a parse tree produced by {@link Antlr4PilarParser#ImplementedBody}.
+   * Exit a parse tree produced by {@link Antlr4PilarParser#implementedBody}.
    * 
    * @param ctx
    *          the parse tree

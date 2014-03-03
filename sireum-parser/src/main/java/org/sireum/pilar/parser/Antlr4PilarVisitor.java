@@ -219,6 +219,24 @@ public interface Antlr4PilarVisitor<T>
       @NotNull Antlr4PilarParser.BlockTransformationContext ctx);
 
   /**
+   * Visit a parse tree produced by {@link Antlr4PilarParser#body}.
+   * 
+   * @param ctx
+   *          the parse tree
+   * @return the visitor result
+   */
+  T visitBody(@NotNull Antlr4PilarParser.BodyContext ctx);
+
+  /**
+   * Visit a parse tree produced by {@link Antlr4PilarParser#bodyFile}.
+   * 
+   * @param ctx
+   *          the parse tree
+   * @return the visitor result
+   */
+  T visitBodyFile(@NotNull Antlr4PilarParser.BodyFileContext ctx);
+
+  /**
    * Visit a parse tree produced by {@link Antlr4PilarParser#CallSuffix}.
    * 
    * @param ctx
@@ -329,7 +347,7 @@ public interface Antlr4PilarVisitor<T>
   T visitElseGuard(@NotNull Antlr4PilarParser.ElseGuardContext ctx);
 
   /**
-   * Visit a parse tree produced by {@link Antlr4PilarParser#EmptyBody}.
+   * Visit a parse tree produced by {@link Antlr4PilarParser#emptyBody}.
    * 
    * @param ctx
    *          the parse tree
@@ -622,7 +640,7 @@ public interface Antlr4PilarVisitor<T>
   T visitIfThenJump(@NotNull Antlr4PilarParser.IfThenJumpContext ctx);
 
   /**
-   * Visit a parse tree produced by {@link Antlr4PilarParser#ImplementedBody}.
+   * Visit a parse tree produced by {@link Antlr4PilarParser#implementedBody}.
    * 
    * @param ctx
    *          the parse tree

@@ -233,6 +233,24 @@ public class Antlr4PilarBaseListener
    * The default implementation does nothing.
    */
   @Override
+  public void enterBody(@NotNull final Antlr4PilarParser.BodyContext ctx) {
+  }
+
+  /**
+   * {@inheritDoc}
+   * <p/>
+   * The default implementation does nothing.
+   */
+  @Override
+  public void enterBodyFile(@NotNull final Antlr4PilarParser.BodyFileContext ctx) {
+  }
+
+  /**
+   * {@inheritDoc}
+   * <p/>
+   * The default implementation does nothing.
+   */
+  @Override
   public void enterCallSuffix(
       @NotNull final Antlr4PilarParser.CallSuffixContext ctx) {
   }
@@ -1535,6 +1553,24 @@ public class Antlr4PilarBaseListener
   @Override
   public void exitBlockTransformation(
       @NotNull final Antlr4PilarParser.BlockTransformationContext ctx) {
+  }
+
+  /**
+   * {@inheritDoc}
+   * <p/>
+   * The default implementation does nothing.
+   */
+  @Override
+  public void exitBody(@NotNull final Antlr4PilarParser.BodyContext ctx) {
+  }
+
+  /**
+   * {@inheritDoc}
+   * <p/>
+   * The default implementation does nothing.
+   */
+  @Override
+  public void exitBodyFile(@NotNull final Antlr4PilarParser.BodyFileContext ctx) {
   }
 
   /**

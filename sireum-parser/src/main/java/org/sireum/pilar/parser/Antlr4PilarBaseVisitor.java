@@ -279,6 +279,28 @@ public class Antlr4PilarBaseVisitor<T> extends AbstractParseTreeVisitor<T>
    * {@link #visitChildren} on {@code ctx}.
    */
   @Override
+  public T visitBody(@NotNull final Antlr4PilarParser.BodyContext ctx) {
+    return visitChildren(ctx);
+  }
+
+  /**
+   * {@inheritDoc}
+   * <p/>
+   * The default implementation returns the result of calling
+   * {@link #visitChildren} on {@code ctx}.
+   */
+  @Override
+  public T visitBodyFile(@NotNull final Antlr4PilarParser.BodyFileContext ctx) {
+    return visitChildren(ctx);
+  }
+
+  /**
+   * {@inheritDoc}
+   * <p/>
+   * The default implementation returns the result of calling
+   * {@link #visitChildren} on {@code ctx}.
+   */
+  @Override
   public T visitCallSuffix(
       @NotNull final Antlr4PilarParser.CallSuffixContext ctx) {
     return visitChildren(ctx);
