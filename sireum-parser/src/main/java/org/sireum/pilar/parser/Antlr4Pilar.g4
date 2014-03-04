@@ -276,7 +276,7 @@ catchClause
 exp
   : primary primarySuffix*                    #PrimaryExp
   | '(' type ')' exp                          #CastExp
-  | op=( UnaryOP | AddOP | MulOP | ID ) exp   #UnaryExp
+  | op=( UnaryOP | AddOP | MulOP ) exp        #UnaryExp
   | exp op=ID exp                             #BinaryExp
   | exp op=MulOP exp                          #BinaryExp
   | exp op=AddOP exp                          #BinaryExp
@@ -522,7 +522,7 @@ HEX
   ;
 
 DEC
-  : ( '0' | '1'..'9' ('_'* Digit)* ) IntegerTypeSuffix?
+  : '-'? ( '0' | '1'..'9' ('_'* Digit)* ) IntegerTypeSuffix?
   ;
 
 OCT
