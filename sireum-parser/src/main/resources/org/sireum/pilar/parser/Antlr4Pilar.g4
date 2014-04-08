@@ -554,10 +554,10 @@ fragment
 IntegerTypeSuffix : 'l' | 'L' | 'i'| 'I';
 
 FLOAT
-  : Digits '.' Digits? Exponent? FloatTypeSuffix?
-  | '.' Digits Exponent? FloatTypeSuffix?
-  | Digits Exponent FloatTypeSuffix?
-  | Digits FloatTypeSuffix
+  : '-'? Digits '.' Digits? Exponent? FloatTypeSuffix?
+  | '-'? '.' Digits Exponent? FloatTypeSuffix?
+  | '-'? Digits Exponent FloatTypeSuffix?
+  | '-'? Digits FloatTypeSuffix
 
     // Hex float literal
   | ('0x' | '0X')
