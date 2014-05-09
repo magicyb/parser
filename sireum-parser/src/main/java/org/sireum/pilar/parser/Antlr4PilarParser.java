@@ -1,4 +1,4 @@
-// Generated from Antlr4Pilar.g4 by ANTLR 4.2
+// Generated from Antlr4Pilar.g4 by ANTLR 4.2.2
 package org.sireum.pilar.parser;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
@@ -729,7 +729,7 @@ public class Antlr4PilarParser extends Parser {
 				{
 				setState(214); 
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,4,_ctx);
+				_alt = 1;
 				do {
 					switch (_alt) {
 					case 1:
@@ -745,7 +745,7 @@ public class Antlr4PilarParser extends Parser {
 					setState(216); 
 					_errHandler.sync(this);
 					_alt = getInterpreter().adaptivePredict(_input,4,_ctx);
-				} while ( _alt!=2 && _alt!=-1 );
+				} while ( _alt!=2 && _alt!=ATN.INVALID_ALT_NUMBER );
 				}
 				break;
 			}
@@ -3275,7 +3275,7 @@ public class Antlr4PilarParser extends Parser {
 				setState(743);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,93,_ctx);
-				while ( _alt!=2 && _alt!=-1 ) {
+				while ( _alt!=2 && _alt!=ATN.INVALID_ALT_NUMBER ) {
 					if ( _alt==1 ) {
 						{
 						{
@@ -3976,7 +3976,7 @@ public class Antlr4PilarParser extends Parser {
 			setState(864);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,114,_ctx);
-			while ( _alt!=2 && _alt!=-1 ) {
+			while ( _alt!=2 && _alt!=ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
@@ -4222,7 +4222,7 @@ public class Antlr4PilarParser extends Parser {
 				setState(916);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,124,_ctx);
-				while ( _alt!=2 && _alt!=-1 ) {
+				while ( _alt!=2 && _alt!=ATN.INVALID_ALT_NUMBER ) {
 					if ( _alt==1 ) {
 						{
 						{
@@ -4388,7 +4388,7 @@ public class Antlr4PilarParser extends Parser {
 				setState(943);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,129,_ctx);
-				while ( _alt!=2 && _alt!=-1 ) {
+				while ( _alt!=2 && _alt!=ATN.INVALID_ALT_NUMBER ) {
 					if ( _alt==1 ) {
 						{
 						{
@@ -5198,7 +5198,7 @@ public class Antlr4PilarParser extends Parser {
 				setState(1086);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,150,_ctx);
-				while ( _alt!=2 && _alt!=-1 ) {
+				while ( _alt!=2 && _alt!=ATN.INVALID_ALT_NUMBER ) {
 					if ( _alt==1 ) {
 						{
 						{
@@ -5244,7 +5244,7 @@ public class Antlr4PilarParser extends Parser {
 				setState(1105);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,153,_ctx);
-				while ( _alt!=2 && _alt!=-1 ) {
+				while ( _alt!=2 && _alt!=ATN.INVALID_ALT_NUMBER ) {
 					if ( _alt==1 ) {
 						{
 						{
@@ -5673,7 +5673,7 @@ public class Antlr4PilarParser extends Parser {
 			setState(1181);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,162,_ctx);
-			while ( _alt!=2 && _alt!=-1 ) {
+			while ( _alt!=2 && _alt!=ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
@@ -5807,9 +5807,20 @@ public class Antlr4PilarParser extends Parser {
 		public List<ExpContext> exp() {
 			return getRuleContexts(ExpContext.class);
 		}
+		public TerminalNode XorOP() { return getToken(Antlr4PilarParser.XorOP, 0); }
+		public TerminalNode CondOrOP() { return getToken(Antlr4PilarParser.CondOrOP, 0); }
+		public TerminalNode CondAndOP() { return getToken(Antlr4PilarParser.CondAndOP, 0); }
+		public TerminalNode ShiftOP() { return getToken(Antlr4PilarParser.ShiftOP, 0); }
 		public ExpContext exp(int i) {
 			return getRuleContext(ExpContext.class,i);
 		}
+		public TerminalNode AndOP() { return getToken(Antlr4PilarParser.AndOP, 0); }
+		public TerminalNode ID() { return getToken(Antlr4PilarParser.ID, 0); }
+		public TerminalNode AddOP() { return getToken(Antlr4PilarParser.AddOP, 0); }
+		public TerminalNode OrOP() { return getToken(Antlr4PilarParser.OrOP, 0); }
+		public TerminalNode EqOP() { return getToken(Antlr4PilarParser.EqOP, 0); }
+		public TerminalNode MulOP() { return getToken(Antlr4PilarParser.MulOP, 0); }
+		public TerminalNode RelOP() { return getToken(Antlr4PilarParser.RelOP, 0); }
 		public BinaryExpContext(ExpContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
@@ -5929,7 +5940,7 @@ public class Antlr4PilarParser extends Parser {
 				setState(1217);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,167,_ctx);
-				while ( _alt!=2 && _alt!=-1 ) {
+				while ( _alt!=2 && _alt!=ATN.INVALID_ALT_NUMBER ) {
 					if ( _alt==1 ) {
 						{
 						{
@@ -5953,7 +5964,7 @@ public class Antlr4PilarParser extends Parser {
 				setState(1225);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,168,_ctx);
-				while ( _alt!=2 && _alt!=-1 ) {
+				while ( _alt!=2 && _alt!=ATN.INVALID_ALT_NUMBER ) {
 					if ( _alt==1 ) {
 						{
 						{
@@ -5974,7 +5985,7 @@ public class Antlr4PilarParser extends Parser {
 			setState(1270);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,171,_ctx);
-			while ( _alt!=2 && _alt!=-1 ) {
+			while ( _alt!=2 && _alt!=ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
 					_prevctx = _localctx;
@@ -7041,7 +7052,7 @@ public class Antlr4PilarParser extends Parser {
 				setState(1415);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,189,_ctx);
-				while ( _alt!=2 && _alt!=-1 ) {
+				while ( _alt!=2 && _alt!=ATN.INVALID_ALT_NUMBER ) {
 					if ( _alt==1 ) {
 						{
 						{
@@ -7056,7 +7067,7 @@ public class Antlr4PilarParser extends Parser {
 				setState(1421);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,190,_ctx);
-				while ( _alt!=2 && _alt!=-1 ) {
+				while ( _alt!=2 && _alt!=ATN.INVALID_ALT_NUMBER ) {
 					if ( _alt==1 ) {
 						{
 						{
@@ -7800,7 +7811,7 @@ public class Antlr4PilarParser extends Parser {
 			setState(1522);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,203,_ctx);
-			while ( _alt!=2 && _alt!=-1 ) {
+			while ( _alt!=2 && _alt!=ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
