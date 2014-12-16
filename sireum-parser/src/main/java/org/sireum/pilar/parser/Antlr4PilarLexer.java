@@ -1,4 +1,4 @@
-// Generated from Antlr4Pilar.g4 by ANTLR 4.2.2
+// Generated from Antlr4Pilar.g4 by ANTLR 4.4
 package org.sireum.pilar.parser;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
@@ -11,6 +11,8 @@ import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class Antlr4PilarLexer extends Lexer {
+	static { RuntimeMetaData.checkVersion("4.4", RuntimeMetaData.VERSION); }
+
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
@@ -31,18 +33,17 @@ public class Antlr4PilarLexer extends Lexer {
 	};
 
 	public static final String[] tokenNames = {
-		"<INVALID>",
-		"'fun'", "'new'", "'{'", "'..'", "'='", "'^'", "'call'", "'null'", "'('", 
-		"','", "'false'", "'actiondef'", "'-!>'", "'const'", "'global'", "'extension'", 
-		"'<'", "']'", "'assert'", "'@'", "'let'", "'then'", "'procdef'", "'catch'", 
-		"'record'", "'true'", "'return'", "'procedure'", "'<=='", "';'", "'==>'", 
-		"'goto'", "'extends'", "'}'", "'if'", "'enum'", "'assume'", "'switch'", 
-		"'.'", "'+>'", "'->'", "'throw'", "'...'", "'expdef'", "':'", "'['", "'|'", 
-		"'>'", "'=>'", "'start'", "'in'", "'else'", "'typedef'", "')'", "'typealias'", 
-		"GID", "ID", "LID", "MSTRING", "WS", "COMMENT", "LINE_COMMENT", "AssignOP", 
-		"CondAndOP", "CondOrOP", "AndOP", "XorOP", "OrOP", "EqOP", "RelOP", "ShiftOP", 
-		"AddOP", "MulOP", "UnaryOP", "HEX", "DEC", "OCT", "BIN", "FLOAT", "CHAR", 
-		"STRING", "ErrorChar"
+		"'\\u0000'", "'\\u0001'", "'\\u0002'", "'\\u0003'", "'\\u0004'", "'\\u0005'", 
+		"'\\u0006'", "'\\u0007'", "'\b'", "'\t'", "'\n'", "'\\u000B'", "'\f'", 
+		"'\r'", "'\\u000E'", "'\\u000F'", "'\\u0010'", "'\\u0011'", "'\\u0012'", 
+		"'\\u0013'", "'\\u0014'", "'\\u0015'", "'\\u0016'", "'\\u0017'", "'\\u0018'", 
+		"'\\u0019'", "'\\u001A'", "'\\u001B'", "'\\u001C'", "'\\u001D'", "'\\u001E'", 
+		"'\\u001F'", "' '", "'!'", "'\"'", "'#'", "'$'", "'%'", "'&'", "'''", 
+		"'('", "')'", "'*'", "'+'", "','", "'-'", "'.'", "'/'", "'0'", "'1'", 
+		"'2'", "'3'", "'4'", "'5'", "'6'", "'7'", "'8'", "'9'", "':'", "';'", 
+		"'<'", "'='", "'>'", "'?'", "'@'", "'A'", "'B'", "'C'", "'D'", "'E'", 
+		"'F'", "'G'", "'H'", "'I'", "'J'", "'K'", "'L'", "'M'", "'N'", "'O'", 
+		"'P'", "'Q'", "'R'"
 	};
 	public static final String[] ruleNames = {
 		"T__54", "T__53", "T__52", "T__51", "T__50", "T__49", "T__48", "T__47", 
